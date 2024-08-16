@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://car17wixvo6o6"]
 
 [ext_resource type="PackedScene" uid="uid://m0k7hf0a8eck" path="res://food.tscn" id="1_pjltm"]
-[ext_resource type="PackedScene" uid="uid://dsmorv284xp2e" path="res://player.tscn" id="2_8lnd5"]
 [ext_resource type="Texture2D" uid="uid://d27ikbwq506w" path="res://icon.svg" id="2_51aoo"]
+[ext_resource type="PackedScene" uid="uid://jm7ycg7cj415" path="res://black_hole.tscn" id="2_f80p5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dth5a"]
 rough = true
@@ -26,5 +26,4 @@ shape = SubResource("CircleShape2D_dumn0")
 position = Vector2(-505, 307)
 navigation_polygon = SubResource("NavigationPolygon_rv3m2")
 
-[node name="player" parent="." instance=ExtResource("2_8lnd5")]
-position = Vector2(235, 395)
+[node name="blackHole" parent="." instance=ExtResource("2_f80p5")]
