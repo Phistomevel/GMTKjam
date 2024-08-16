@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://m0k7hf0a8eck"]
+
+[ext_resource type="Script" path="res://Food.gd" id="1_swqf5"]
+[ext_resource type="Texture2D" uid="uid://d27ikbwq506w" path="res://icon.svg" id="2_4ar0v"]
+
+[node name="food" type="RigidBody2D" groups=["food"]]
+gravity_scale = 0.0
+script = ExtResource("1_swqf5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_4ar0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

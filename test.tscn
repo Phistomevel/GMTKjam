@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://car17wixvo6o6"]
+
+[ext_resource type="PackedScene" uid="uid://m0k7hf0a8eck" path="res://food.tscn" id="1_pjltm"]
+[ext_resource type="PackedScene" uid="uid://dsmorv284xp2e" path="res://player.tscn" id="2_8lnd5"]
+[ext_resource type="Texture2D" uid="uid://d27ikbwq506w" path="res://icon.svg" id="2_51aoo"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dth5a"]
+rough = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dumn0"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_rv3m2"]
+outlines = Array[PackedVector2Array]([PackedVector2Array(-222, -247, -238, 144, 412, 149, 389, -228)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="food" parent="." instance=ExtResource("1_pjltm")]
+position = Vector2(537, 417)
+physics_material_override = SubResource("PhysicsMaterial_dth5a")
+linear_damp = 6.24
+sprite = ExtResource("2_51aoo")
+shape = SubResource("CircleShape2D_dumn0")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(-505, 307)
+navigation_polygon = SubResource("NavigationPolygon_rv3m2")
+
+[node name="player" parent="." instance=ExtResource("2_8lnd5")]
+position = Vector2(235, 395)
