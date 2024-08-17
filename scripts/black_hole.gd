@@ -2,7 +2,7 @@ extends Node2D
 
 signal gameLost
 
-@export var speed : int = 10
+@export var speed : int = 3
 
 var size
 var foodList
@@ -24,8 +24,9 @@ func _ready():
 func _process(delta):
 	if framesSinceFoodReevaluation >15:
 		reevaluateFood()
-	var targetDir = (closestFood.position - position).normalized()
-	position = position + targetDir*speed * (delta*20)
+	if(not closestFood == null):
+		var targetDir = (closestFood.position - position).normalized()
+		position = position + targetDir*speed * (delta*20)
 
 
 func reevaluateFood():
@@ -35,18 +36,20 @@ func reevaluateFood():
 	pass
 
 func updateFood():
-	foodList= get_tree().root.get_nodes_in_group("food")
+	foodList= get_tree().get_nodes_in_group("food")
 	pass
 
 func updateSize():
-	scale = 1+ 0.1*size
+	scale = Vector2(1,1)+ 0.1*size*(Vector2(1,1))
 
 func _on_area_2d_body_entered(body):
 	#check if body is food
 	if(body.is_in_group("food")):
 		size += body.nutritionalValue
-		updateSize()
 		body.queue_free()
+		updateSize()
+		foodList.remove_at(foodList.find(body))
+		reevaluateFood()
 		pass
 	elif(body.name =="player"):
 		gameLost.emit()
