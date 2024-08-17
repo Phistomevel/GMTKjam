@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_f80p5"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="4_hv7bl"]
 
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dth5a"]
 rough = true
 
