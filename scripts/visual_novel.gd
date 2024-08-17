@@ -30,6 +30,10 @@ var fin : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$SpeakerPic1.position = LeftPos
+	$SpeakerPic1.scale = LeftScale
+	$SpeakerPic2.position = RightPos
+	$SpeakerPic2.scale = RightScale
 	convo()
 
 
@@ -68,7 +72,7 @@ func convo():
 			Text.visible_ratio = 0
 			Text.text = ConvoList[convoind]
 			fin = false
-			tween.tween_property(Text, "visible_ratio", 1, Text.get_total_character_count()/10)
+			tween.tween_property(Text, "visible_ratio", 1, Text.get_total_character_count()/10.0)
 			killtween = tween
 	else:
 		killtween.kill()
