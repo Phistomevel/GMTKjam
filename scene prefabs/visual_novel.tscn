@@ -1,0 +1,111 @@
+[gd_scene load_steps=6 format=3 uid="uid://c37d8kn12ekpu"]
+
+[ext_resource type="Texture2D" uid="uid://d27ikbwq506w" path="res://icon.svg" id="1_21kpv"]
+[ext_resource type="Script" path="res://scripts/visual_novel.gd" id="1_bmqjy"]
+[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="2_bwn00"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pki57"]
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6da5q"]
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="VisualNovel" type="Control"]
+layout_mode = 3
+anchor_left = 0.500434
+anchor_top = 1.0
+anchor_right = 0.500434
+anchor_bottom = 1.0
+offset_left = -524.5
+offset_top = -180.0
+offset_right = 524.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_bmqjy")
+metadata/_edit_use_anchors_ = true
+
+[node name="SpeakerPic1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(127, -40)
+texture = ExtResource("1_21kpv")
+
+[node name="SpeakerPic2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(891, -40)
+texture = ExtResource("1_21kpv")
+
+[node name="SpeakerForm" type="Panel" parent="."]
+clip_children = 1
+layout_mode = 0
+offset_top = -27.0
+offset_right = 131.0
+offset_bottom = -2.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_pki57")
+
+[node name="SpeakerBackground" type="TextureRect" parent="SpeakerForm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bwn00")
+expand_mode = 1
+
+[node name="SpeakerMargin" type="MarginContainer" parent="SpeakerForm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="SpeakerName" type="Label" parent="SpeakerForm/SpeakerMargin"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+
+[node name="TextForm" type="Panel" parent="."]
+clip_children = 1
+layout_mode = 0
+offset_right = 1050.0
+offset_bottom = 136.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6da5q")
+
+[node name="TextBackground" type="TextureRect" parent="TextForm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bwn00")
+expand_mode = 1
+
+[node name="TextMargin" type="MarginContainer" parent="TextForm"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Text" type="Label" parent="TextForm/TextMargin"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Placeholder text"
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
