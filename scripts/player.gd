@@ -25,4 +25,6 @@ func _physics_process(delta):
 	if collision:
 		if collision.get_collider().is_in_group("food"):
 			collision.get_collider().apply_force(200*direction, 200*direction)
+		elif collision.get_collider().is_in_group("antifood"):
+			collision.get_collider().apply_force(200*direction, 200*direction)
 		pass

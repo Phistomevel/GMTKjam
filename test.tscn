@@ -1,11 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://car17wixvo6o6"]
+[gd_scene load_steps=8 format=3 uid="uid://car17wixvo6o6"]
 
 [ext_resource type="PackedScene" uid="uid://brtl7qm7720x4" path="res://scene prefabs/food.tscn" id="1_pjltm"]
+[ext_resource type="PhysicsMaterial" uid="uid://diqqpqcyq2ksx" path="res://material/foodstuff.tres" id="2_d4gct"]
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_f80p5"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="4_hv7bl"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dth5a"]
-rough = true
+[ext_resource type="PackedScene" uid="uid://bpe2vrspc3fyy" path="res://scene prefabs/antifood.tscn" id="4_unepa"]
+[ext_resource type="PackedScene" uid="uid://cqb0bquefh0ub" path="res://scene prefabs/antifood_bacterium.tscn" id="6_2wrvu"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rv3m2"]
 outlines = Array[PackedVector2Array]([PackedVector2Array(-222, -247, -238, 144, 412, 149, 389, -228)])
@@ -15,8 +15,8 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="food" parent="." instance=ExtResource("1_pjltm")]
 position = Vector2(565, 466)
-physics_material_override = SubResource("PhysicsMaterial_dth5a")
-linear_damp = 6.24
+physics_material_override = ExtResource("2_d4gct")
+nutritionalValue = 2
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(-505, 307)
@@ -28,3 +28,14 @@ position = Vector2(162, -22)
 [node name="player" parent="." instance=ExtResource("4_hv7bl")]
 position = Vector2(521, 542)
 scale = Vector2(0.175, 0.175)
+
+[node name="antifood" parent="." instance=ExtResource("4_unepa")]
+position = Vector2(222, 356)
+physics_material_override = ExtResource("2_d4gct")
+nutritionalValue = -2
+
+[node name="antifood2" parent="." instance=ExtResource("4_unepa")]
+position = Vector2(397, 234)
+
+[node name="antifood_bacterium" parent="." instance=ExtResource("6_2wrvu")]
+position = Vector2(855, 540)
