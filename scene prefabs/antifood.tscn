@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpe2vrspc3fyy"]
+[gd_scene load_steps=3 format=3 uid="uid://bpe2vrspc3fyy"]
 
 [ext_resource type="Script" path="res://scripts/antifood.gd" id="1_ud3xu"]
-[ext_resource type="Texture2D" uid="uid://d27ikbwq506w" path="res://icon.svg" id="2_1kthc"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_q2uvk"]
-radius = 33.0606
+[ext_resource type="Texture2D" uid="uid://dxeljo2b5tw7v" path="res://assets/Antifood/AntiMatter_3.png" id="2_wl0f6"]
 
 [node name="antifood" type="RigidBody2D" groups=["antifood"]]
 gravity_scale = 0.0
@@ -14,10 +11,10 @@ angular_damp = 100.0
 script = ExtResource("1_ud3xu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.46875, 0.46875)
-texture = ExtResource("2_1kthc")
+scale = Vector2(0.079, 0.079)
+texture = ExtResource("2_wl0f6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_q2uvk")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(2, -26, 10, -22, 18, -15, 23, -6, 26, 8, 26, 15, 21, 23, 14, 26, 6, 26, -9, 19, -23, 9, -26, 3, -25, -5, -19, -17, -11, -26, -9, -28, -4, -28)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
