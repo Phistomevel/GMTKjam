@@ -22,17 +22,20 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	framesSinceFoodReevaluation += 1
 	if framesSinceFoodReevaluation >15:
+		updateFood()
 		reevaluateFood()
+		framesSinceFoodReevaluation = 0
 	if(not closestFood == null):
 		var targetDir = (closestFood.position - position).normalized()
 		position = position + targetDir*speed * (delta*20)
 
 
 func reevaluateFood():
-	closestFood = foodList.reduce(func(max, food): return food if (
-		(food.position.x-position.x)^2+(food.position.y-position.y)^2>max
-	) else max)
+	closestFood = foodList.reduce(func(min, food): return food if (
+		food.global_position.distance_to(global_position) < min.global_position.distance_to(global_position)
+	) else min)
 	pass
 
 func updateFood():
@@ -48,8 +51,13 @@ func _on_area_2d_body_entered(body):
 		size += body.nutritionalValue
 		body.queue_free()
 		updateSize()
-		foodList.remove_at(foodList.find(body))
+		updateFood()
 		reevaluateFood()
+		pass
+	elif(body.is_in_group("antifood")):
+		size += body.nutritionalValue
+		body.queue_free()
+		updateSize()
 		pass
 	elif(body.name =="player"):
 		gameLost.emit()
