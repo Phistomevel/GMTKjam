@@ -7,8 +7,10 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("./Sprite2D").texture = sprite
-	get_node("./CollisionShape2D").shape = shape
+	if sprite:
+		get_node("./Sprite2D").texture = sprite
+	if shape:
+		get_node("./CollisionShape2D").shape = shape
 	pass # Replace with function body.
 
 

@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
-@export var speed : int = 100
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+@export var speed : int = 200
+const SPEED = 600.0
+const JUMP_VELOCITY = -4000.0
 const ANIMATION_PLAYER_PATH = "Node2D"
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -24,5 +24,5 @@ func _physics_process(delta):
 	var collision : KinematicCollision2D = move_and_collide(direction)
 	if collision:
 		if collision.get_collider().is_in_group("food"):
-			collision.get_collider().apply_central_force(100*(collision.get_collider().position-position))
+			collision.get_collider().apply_force(200*direction, 200*direction)
 		pass

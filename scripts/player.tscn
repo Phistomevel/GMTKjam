@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7qpctvo0nraq"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_erqey"]
+[ext_resource type="Texture2D" uid="uid://cfnu5w47mvf86" path="res://assets/player_linkerArm.png" id="2_oggpb"]
+[ext_resource type="Texture2D" uid="uid://c52dshixcdhha" path="res://assets/player_rechterArm.png" id="3_5cdr4"]
+[ext_resource type="Texture2D" uid="uid://dt33io2qjuh35" path="res://assets/player_nurKopf.png" id="4_v3r35"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0tkrd"]
+radius = 346.591
+
+[sub_resource type="Animation" id="Animation_ve4mv"]
+resource_name = "Walking"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("leftArm:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.0001),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0.515), Vector2(1, 1), Vector2(1, 0.5), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("rightArm:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.5), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yv61x"]
+_data = {
+"Walking": SubResource("Animation_ve4mv")
+}
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_erqey")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0tkrd")
+
+[node name="Node2D" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yv61x")
+}
+speed_scale = 2.0
+
+[node name="leftArm" type="Sprite2D" parent="."]
+scale = Vector2(1, 0.515)
+texture = ExtResource("2_oggpb")
+
+[node name="rightArm" type="Sprite2D" parent="."]
+texture = ExtResource("3_5cdr4")
+
+[node name="Head" type="Sprite2D" parent="."]
+position = Vector2(-5, -62)
+texture = ExtResource("4_v3r35")

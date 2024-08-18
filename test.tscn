@@ -1,15 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://car17wixvo6o6"]
+[gd_scene load_steps=6 format=3 uid="uid://car17wixvo6o6"]
 
 [ext_resource type="PackedScene" uid="uid://brtl7qm7720x4" path="res://scene prefabs/food.tscn" id="1_pjltm"]
-[ext_resource type="Texture2D" uid="uid://d27ikbwq506w" path="res://icon.svg" id="2_51aoo"]
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_f80p5"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="4_hv7bl"]
 
-
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dth5a"]
 rough = true
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_dumn0"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rv3m2"]
 outlines = Array[PackedVector2Array]([PackedVector2Array(-222, -247, -238, 144, 412, 149, 389, -228)])
@@ -18,17 +14,16 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 [node name="Node2D" type="Node2D"]
 
 [node name="food" parent="." instance=ExtResource("1_pjltm")]
-position = Vector2(537, 417)
+position = Vector2(565, 466)
 physics_material_override = SubResource("PhysicsMaterial_dth5a")
 linear_damp = 6.24
-sprite = ExtResource("2_51aoo")
-shape = SubResource("CircleShape2D_dumn0")
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 position = Vector2(-505, 307)
 navigation_polygon = SubResource("NavigationPolygon_rv3m2")
 
 [node name="blackHole" parent="." instance=ExtResource("2_f80p5")]
+position = Vector2(162, -22)
 
 [node name="player" parent="." instance=ExtResource("4_hv7bl")]
 position = Vector2(521, 542)
