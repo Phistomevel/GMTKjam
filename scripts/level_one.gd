@@ -20,7 +20,7 @@ var foodShapes = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass 
+	GlobalAudioPlayer.play_first_level_music()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -51,6 +51,7 @@ func spawnAntiFoodBacterium():
 	newBacterium.global_position = randomPointOnMap()
 	# TODO: Roatation ggf. rausnehmen
 	newBacterium.rotation = randf_range(0, 2*PI)
+	newBacterium.nutritionalValue = 2
 	add_child(newBacterium)
 
 func _on_anti_food_bact_cooldown_timeout():

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="GMTKjam"
-run/main_scene="res://test.tscn"
+run/main_scene="res://level scenes/title_page.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GlobalAudioPlayer="*res://Audio/global_audio_player.tscn"
 
 [display]
 

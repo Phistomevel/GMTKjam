@@ -7,7 +7,7 @@ func _ready():
 
 
 func _on_return_button_pressed():
-	print("pressed")
+	GlobalAudioPlayer.play_click()
 	queue_free()
 
 
