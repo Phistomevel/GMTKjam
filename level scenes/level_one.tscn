@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bc1qaycsc8oxd"]
+[gd_scene load_steps=6 format=3 uid="uid://6wuuda3ofw5a"]
 
 [ext_resource type="Script" path="res://scripts/level_one.gd" id="1_0fsi3"]
 [ext_resource type="Texture2D" uid="uid://v6lbsnqd8t4x" path="res://assets/level_one_map/map.png" id="1_i5y0m"]
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_fsm7d"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="3_qj4xj"]
+[ext_resource type="PackedScene" uid="uid://ds3fmrqty47dp" path="res://scene prefabs/level1_hud.tscn" id="5_1wje2"]
 
 [node name="Level_One" type="Node2D"]
 script = ExtResource("1_0fsi3")
@@ -18,7 +19,6 @@ polygon = PackedVector2Array(0, -1004, 102, -998, 182, -988, 246, -973, 311, -95
 
 [node name="blackHole" parent="." instance=ExtResource("2_fsm7d")]
 position = Vector2(-379, -145)
-scale = Vector2(1.72, 1.72)
 
 [node name="player" parent="." instance=ExtResource("3_qj4xj")]
 z_index = 1
@@ -27,6 +27,8 @@ scale = Vector2(0.145, 0.145)
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 
+[node name="CanvasLayer" parent="player/Camera2D" instance=ExtResource("5_1wje2")]
+
 [node name="FoodSpawnCooldown" type="Timer" parent="."]
 autostart = true
 
@@ -34,5 +36,10 @@ autostart = true
 wait_time = 20.0
 autostart = true
 
+[connection signal="aboveCritical" from="blackHole" to="." method="_on_black_hole_above_critical"]
+[connection signal="belowCritical" from="blackHole" to="." method="_on_black_hole_below_critical"]
+[connection signal="gameLost" from="blackHole" to="." method="_on_black_hole_game_lost"]
+[connection signal="sizeChanged" from="blackHole" to="." method="_on_black_hole_size_changed"]
+[connection signal="gameWon" from="player/Camera2D/CanvasLayer" to="." method="_on_canvas_layer_game_won"]
 [connection signal="timeout" from="FoodSpawnCooldown" to="." method="_on_food_spawn_cooldown_timeout"]
 [connection signal="timeout" from="AntiFoodBactCooldown" to="." method="_on_anti_food_bact_cooldown_timeout"]
