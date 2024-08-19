@@ -1,0 +1,91 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgv2s16ofyy5"]
+
+[ext_resource type="Texture2D" uid="uid://cnlj7glb86tbo" path="res://assets/level_three/level_three_map/strasse.png" id="1_ng65c"]
+[ext_resource type="Texture2D" uid="uid://cbphbmr1yjgvm" path="res://assets/level_three/level_three_map/mapAnfang.png" id="2_4717p"]
+[ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="3_2nwvk"]
+[ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="4_uye01"]
+[ext_resource type="Texture2D" uid="uid://pasud5uwko3r" path="res://assets/level_three/level_three_map/busch.png" id="5_ak7e5"]
+
+[node name="Level_Three" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D18" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(0, -2159)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D/Sprite2D18"]
+position = Vector2(0, 4319)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2"]
+position = Vector2(0, 2159)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3"]
+position = Vector2(0, 2158)
+texture = ExtResource("2_4717p")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4"]
+position = Vector2(-2159, 1)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5"]
+position = Vector2(2, 2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6"]
+position = Vector2(2157, -1)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7"]
+position = Vector2(2159, 1)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D10" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9"]
+position = Vector2(0, -2159)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D11" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D12" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11"]
+position = Vector2(-4317, 2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D13" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D14" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13"]
+position = Vector2(0, -2156)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D15" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13/Sprite2D14"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D16" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13/Sprite2D14/Sprite2D15"]
+position = Vector2(4316, 2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D17" type="Sprite2D" parent="Sprite2D/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13/Sprite2D14/Sprite2D15/Sprite2D16"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="player" parent="." instance=ExtResource("3_2nwvk")]
+position = Vector2(-547, 6364)
+scale = Vector2(0.225, 0.225)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.525, 0.525)
+
+[node name="blackHole" parent="." instance=ExtResource("4_uye01")]
+position = Vector2(89, 7129)
+scale = Vector2(3.155, 3.155)
