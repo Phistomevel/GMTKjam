@@ -1,0 +1,109 @@
+[gd_scene load_steps=4 format=3 uid="uid://cyygkm0kh4tnk"]
+
+[ext_resource type="Script" path="res://scripts/sound_settings.gd" id="1_827vh"]
+[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="1_wa38e"]
+[ext_resource type="PackedScene" uid="uid://cgcjqg3fignr3" path="res://scene prefabs/audio_slider.tscn" id="2_k28e5"]
+
+[node name="SoundSettings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_827vh")
+
+[node name="ReturnButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 2
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 300
+theme_override_constants/margin_bottom = 200
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer"]
+modulate = Color(0.4, 0.4, 0.4, 1)
+layout_mode = 2
+texture = ExtResource("1_wa38e")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="MasterLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Master Volume"
+
+[node name="AudioSliderMaster" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_k28e5")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+step = 0.01
+busName = "Master"
+
+[node name="MasterValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "0%"
+
+[node name="MusicLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Music Volume"
+
+[node name="AudioSliderMusic" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_k28e5")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+step = 0.01
+busName = "Music"
+
+[node name="MusicValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "0%"
+
+[node name="SoundLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Sound Volume"
+
+[node name="AudioSliderSound" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer" instance=ExtResource("2_k28e5")]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 4
+step = 0.01
+busName = "Sound"
+
+[node name="SoundValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+text = "0%"
+
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/AudioSliderMaster" to="." method="_on_audio_slider_master_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/AudioSliderMusic" to="." method="_on_audio_slider_music_value_changed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/AudioSliderSound" to="." method="_on_audio_slider_sound_value_changed"]

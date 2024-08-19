@@ -10,4 +10,4 @@ func _on_start_game_button_pressed():
 
 
 func _on_options_button_pressed():
-	print("Somebody didn't code the settings...")
+	add_child(preload("res://scene prefabs/sound_settings.tscn").instantiate())
