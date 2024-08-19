@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @export var sprite : Texture2D
-@export var shape  : Shape2D
+@export var shape  : PackedVector2Array
 
 @export var nutritionalValue : int = 0 #idk rename when you find a different name
 
@@ -10,7 +10,7 @@ func _ready():
 	if sprite:
 		get_node("./Sprite2D").texture = sprite
 	if shape:
-		get_node("./CollisionShape2D").shape = shape
+		get_node("./CollisionShape2D").polygon = shape
 	pass # Replace with function body.
 
 

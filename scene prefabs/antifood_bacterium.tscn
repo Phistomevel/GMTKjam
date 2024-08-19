@@ -1,14 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqb0bquefh0ub"]
+[gd_scene load_steps=5 format=3 uid="uid://d2ainclj7k5sj"]
 
 [ext_resource type="Script" path="res://scripts/antifood_bacterium.gd" id="1_6rjnx"]
-[ext_resource type="Texture2D" uid="uid://d27ikbwq506w" path="res://icon.svg" id="2_csdwn"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_q2uvk"]
-radius = 33.0606
+[ext_resource type="PhysicsMaterial" uid="uid://diqqpqcyq2ksx" path="res://material/foodstuff.tres" id="1_lmy53"]
+[ext_resource type="Texture2D" uid="uid://cvp8onwivk7cj" path="res://assets/antimatterbakterie/bakterie.png" id="3_l5w20"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_168w3"]
 
 [node name="antifood_bacterium" type="RigidBody2D" groups=["antifood_bacterium", "food"]]
+physics_material_override = ExtResource("1_lmy53")
 gravity_scale = 0.0
 lock_rotation = true
 linear_damp = 6.24
@@ -16,11 +15,11 @@ angular_damp = 100.0
 script = ExtResource("1_6rjnx")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.46875, 0.46875)
-texture = ExtResource("2_csdwn")
+scale = Vector2(0.074, 0.074)
+texture = ExtResource("3_l5w20")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_q2uvk")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(2, -16, 6, -22, 11, -24, 16, -23, 20, -21, 23, -18, 24, -14, 24, -9, 24, -4, 23, 0, 23, 4, 22, 8, 20, 14, 17, 19, 14, 23, 10, 26, 5, 29, 1, 31, -4, 32, -10, 33, -15, 32, -19, 31, -23, 27, -23, 23, -22, 19, -19, 15, -17, 12, -14, 9, -11, 6, -8, 3, -5, 0, -2, -4, -1, -8, 1, -12)
 
 [node name="Area2D" type="Area2D" parent="."]
 
