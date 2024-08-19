@@ -5,6 +5,8 @@ extends RigidBody2D
 
 @export var nutritionalValue : int = 0 #idk rename when you find a different name
 
+@export var rotationSpeed : float = 0.001
+
 @onready var antiFoodSprites = [
 	preload("res://assets/Antifood/AntiMatter_1.png"),
 	preload("res://assets/Antifood/AntiMatter_2.png"),
@@ -26,7 +28,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	rotateAreaSprite(rotationSpeed)
+
+
+func rotateAreaSprite(rotationSpeed):
+	%Sprite2D2.rotate(rotationSpeed)
 
 
 func _on_body_entered(body):
@@ -45,4 +51,9 @@ func _on_area_2d_body_entered(body):
 		spawnAntifood.sprite = antiFoodSprites[variate]
 		spawnAntifood.shape = PackedVector2Array(antiFoodShapes[variate])
 		spawnAntifood.rotation = randf_range(0, 2*PI)
+		spawnParticle(pos)
 		get_parent().add_child(spawnAntifood)
+
+func spawnParticle(pos):
+	%PartikelAntimaterieSpawn.global_position = pos
+	%PartikelAntimaterieSpawn.restart()

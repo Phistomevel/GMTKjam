@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://cyj3mnh1kk7tu"]
+
+[ext_resource type="Texture2D" uid="uid://nje5c2fgo48" path="res://assets/antimatterbakterie/partikelTexturAntimatterBact.png" id="1_4yaqn"]
+
+[sub_resource type="Curve" id="Curve_c4cmt"]
+_data = [Vector2(0.266667, 0.153846), 0.0, 0.0, 0, 0, Vector2(0.453333, 0.406593), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_nu7sj"]
+curve = SubResource("Curve_c4cmt")
+
+[sub_resource type="Gradient" id="Gradient_kmcik"]
+offsets = PackedFloat32Array(0.0163934, 1)
+colors = PackedColorArray(0.207843, 0.717647, 0.576471, 1, 0.788235, 0.980392, 0.913725, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0bir1"]
+gradient = SubResource("Gradient_kmcik")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c5ef7"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 7.0
+initial_velocity_max = 10.0
+angular_velocity_min = 5.0
+angular_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+damping_max = 8.99
+scale_min = 2.0
+scale_max = 7.0
+color = Color(0.388235, 0.854902, 0.72549, 1)
+color_ramp = SubResource("GradientTexture1D_0bir1")
+alpha_curve = SubResource("CurveTexture_nu7sj")
+
+[node name="PartikelAntimaterieSpawn" type="GPUParticles2D"]
+z_index = 2
+emitting = false
+amount = 75
+process_material = SubResource("ParticleProcessMaterial_c5ef7")
+texture = ExtResource("1_4yaqn")
+lifetime = 1.25
+one_shot = true
+speed_scale = 0.75
+explosiveness = 0.9
