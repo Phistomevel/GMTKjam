@@ -1,0 +1,319 @@
+[gd_scene load_steps=36 format=3 uid="uid://wvslo2gp2ehq"]
+
+[ext_resource type="Script" path="res://scripts/title_page.gd" id="1_2x3by"]
+[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="1_qetim"]
+[ext_resource type="FontFile" uid="uid://00nwufw06k7x" path="res://fonts/Action.otf" id="2_h6s18"]
+[ext_resource type="Texture2D" uid="uid://cymo7r6soi3qm" path="res://assets/temp/BillFull.png" id="4_au1fd"]
+[ext_resource type="Texture2D" uid="uid://dc562st54kj0s" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0000.png" id="5_w58u6"]
+[ext_resource type="Texture2D" uid="uid://dn000i71d88ae" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0001.png" id="6_gujw2"]
+[ext_resource type="Texture2D" uid="uid://cy8ayr731x4jr" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0002.png" id="7_vfei5"]
+[ext_resource type="Texture2D" uid="uid://bvibncr447wta" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0003.png" id="8_yhllp"]
+[ext_resource type="Texture2D" uid="uid://cu2njnstl1da3" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0004.png" id="9_3ttks"]
+[ext_resource type="Texture2D" uid="uid://cctepb7jt8jwd" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0005.png" id="10_6840k"]
+[ext_resource type="Texture2D" uid="uid://cqhvj0751qrii" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0006.png" id="11_dt667"]
+[ext_resource type="Texture2D" uid="uid://baegr6et8tjsp" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0007.png" id="12_76m5l"]
+[ext_resource type="Texture2D" uid="uid://voej2sdkum6i" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0008.png" id="13_o58wd"]
+[ext_resource type="Texture2D" uid="uid://bx20gkfes582o" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0009.png" id="14_q0c1i"]
+[ext_resource type="Texture2D" uid="uid://b27em7f65nglx" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0010.png" id="15_qu50y"]
+[ext_resource type="Texture2D" uid="uid://brfv1gl4o8wuc" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0011.png" id="16_3e8dm"]
+[ext_resource type="Texture2D" uid="uid://277ne13e01ch" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0012.png" id="17_trsyy"]
+[ext_resource type="Texture2D" uid="uid://ewoy18bqg8g6" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0013.png" id="18_ihv24"]
+[ext_resource type="Texture2D" uid="uid://h3wsd00yj81n" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0014.png" id="19_7g2bm"]
+[ext_resource type="Texture2D" uid="uid://bptkbht0t5s1p" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0015.png" id="20_xsjuk"]
+[ext_resource type="Texture2D" uid="uid://ddapoiaqxg1mb" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0016.png" id="21_olshv"]
+[ext_resource type="Texture2D" uid="uid://dtpx1pfy1g1sx" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0017.png" id="22_by0p6"]
+[ext_resource type="Texture2D" uid="uid://b3l08g8q1lhu5" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0018.png" id="23_qwhrn"]
+[ext_resource type="Texture2D" uid="uid://b8xgip0r58aoq" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0019.png" id="24_h28id"]
+[ext_resource type="Texture2D" uid="uid://blx0l1ct1ohsp" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0020.png" id="25_shbh4"]
+[ext_resource type="Texture2D" uid="uid://dewh72ivg0hqy" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0021.png" id="26_7hxud"]
+[ext_resource type="Texture2D" uid="uid://bjrpqraurnlxo" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0022.png" id="27_3qn68"]
+[ext_resource type="Texture2D" uid="uid://ce400ot4py637" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0023.png" id="28_p8ymt"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_r1f02"]
+thickness = 0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ri20u"]
+thickness = 0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5xrl7"]
+thickness = 0
+
+[sub_resource type="Animation" id="Animation_tfscr"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/MarginContainer/Control/HBoxContainer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_id62l"]
+resource_name = "TitleText"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/MarginContainer/Control/HBoxContainer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0.05, -0.25, 0, 0.25, 0, -0.05, -0.25, 0, 0.25, 0, 0.05, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1, 2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i1cqh"]
+_data = {
+"RESET": SubResource("Animation_tfscr"),
+"TitleText": SubResource("Animation_id62l")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iuenl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_w58u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gujw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vfei5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yhllp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3ttks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6840k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dt667")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_76m5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_o58wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q0c1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qu50y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3e8dm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_trsyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ihv24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7g2bm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xsjuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_olshv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_by0p6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_qwhrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_h28id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_shbh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7hxud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3qn68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_p8ymt")
+}],
+"loop": true,
+"name": &"black_hole",
+"speed": 12.0
+}]
+
+[node name="TitlePage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2x3by")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qetim")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Control" type="Control" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(566, 65)
+alignment = 1
+
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+theme_override_styles/separator = SubResource("StyleBoxLine_r1f02")
+
+[node name="Control" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/Control/HBoxContainer/Control"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 41.0
+offset_right = 74.0
+offset_bottom = 89.0
+rotation = -0.174533
+pivot_offset = Vector2(70, 48)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_h6s18")
+theme_override_font_sizes/font_size = 50
+text = "Bill"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+theme_override_styles/separator = SubResource("StyleBoxLine_r1f02")
+
+[node name="Control2" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/MarginContainer/Control/HBoxContainer/Control2"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 41.0
+offset_right = 60.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_h6s18")
+theme_override_font_sizes/font_size = 50
+text = "\"2\""
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+theme_override_styles/separator = SubResource("StyleBoxLine_ri20u")
+
+[node name="Control3" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/MarginContainer/Control/HBoxContainer/Control3"]
+layout_mode = 2
+offset_left = -113.0
+offset_top = 41.0
+offset_right = -4.0
+offset_bottom = 89.0
+rotation = 0.174533
+pivot_offset = Vector2(0, 48)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_h6s18")
+theme_override_font_sizes/font_size = 50
+text = "Scale"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="StartGameButton" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_h6s18")
+theme_override_font_sizes/font_size = 30
+text = "Start Game"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_5xrl7")
+
+[node name="OptionsButton" type="Button" parent="."]
+modulate = Color(1, 0.615686, 0.337255, 1)
+layout_mode = 2
+offset_left = 1088.0
+offset_top = 23.0
+offset_right = 1119.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+text = "🎵"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_i1cqh")
+}
+autoplay = "TitleText"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(158, 371)
+scale = Vector2(0.615, 0.615)
+texture = ExtResource("4_au1fd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(973, 316)
+scale = Vector2(0.168, 0.168)
+sprite_frames = SubResource("SpriteFrames_iuenl")
+animation = &"black_hole"
+autoplay = "black_hole"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]

@@ -4,7 +4,7 @@
 [ext_resource type="PhysicsMaterial" uid="uid://diqqpqcyq2ksx" path="res://material/foodstuff.tres" id="2_d4gct"]
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_f80p5"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="4_hv7bl"]
-[ext_resource type="PackedScene" path="res://scene prefabs/antifood.tscn" id="4_unepa"]
+[ext_resource type="PackedScene" uid="uid://bpe2vrspc3fyy" path="res://scene prefabs/antifood.tscn" id="4_unepa"]
 [ext_resource type="PackedScene" uid="uid://d2ainclj7k5sj" path="res://scene prefabs/antifood_bacterium.tscn" id="6_2wrvu"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_rv3m2"]
