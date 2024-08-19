@@ -37,6 +37,7 @@ func spawnFood():
 	var variate = randi_range(0,9)
 	newFood.sprite = foodSprites[variate]
 	newFood.rotation = randf_range(0, 2*PI)
+	newFood.nutritionalValue = 2
 	if variate < 6:
 		newFood.shape = PackedVector2Array(foodShapes[0])
 	else:
@@ -55,3 +56,25 @@ func spawnAntiFoodBacterium():
 
 func _on_anti_food_bact_cooldown_timeout():
 	spawnAntiFoodBacterium()
+
+
+func _on_black_hole_size_changed(value):
+	$player/Camera2D/CanvasLayer.updateBar(value+20)
+
+
+func _on_black_hole_below_critical():
+	$player/Camera2D/CanvasLayer.startWin()
+
+
+func _on_black_hole_above_critical():
+	$player/Camera2D/CanvasLayer.stopWin()
+
+
+func _on_canvas_layer_game_won():
+	print("Yay")
+	pass # Replace with function body.
+
+
+func _on_black_hole_game_lost():
+	print("Sadge")
+	pass # Replace with function body.

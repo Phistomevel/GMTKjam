@@ -1,6 +1,9 @@
 extends Node2D
 
 signal gameLost
+signal sizeChanged(value)
+signal belowCritical
+signal aboveCritical
 
 @export var speed : int = 3
 
@@ -44,6 +47,13 @@ func updateFood():
 
 func updateSize():
 	scale = Vector2(1,1)+ 0.1*size*(Vector2(1,1))
+	sizeChanged.emit(size)
+	if size < -5:
+		belowCritical.emit()
+	elif size > -5:
+		aboveCritical.emit()
+	if size >= 80:
+		gameLost.emit()
 
 func _on_area_2d_body_entered(body):
 	#check if body is food
