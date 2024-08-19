@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bc1qaycsc8oxd"]
+
+[ext_resource type="Script" path="res://scripts/level_one.gd" id="1_0fsi3"]
+[ext_resource type="Texture2D" uid="uid://v6lbsnqd8t4x" path="res://assets/level_one_map/map.png" id="1_i5y0m"]
+[ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_fsm7d"]
+[ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="3_qj4xj"]
+
+[node name="Level_One" type="Node2D"]
+script = ExtResource("1_0fsi3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_i5y0m")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, -1004, 102, -998, 182, -988, 246, -973, 311, -954, 388, -926, 449, -897, 521, -858, 587, -814, 666, -750, 734, -685, 810, -592, 872, -497, 920, -401, 958, -303, 984, -210, 998, -126, 1006, -40, 1007, 65, 995, 168, 976, 263, 940, 381, 903, 464, 861, 540, 814, 612, 760, 679, 689, 753, 625, 810, 552, 862, 476, 907, 476, 908, 406, 944, 317, 978, 233, 1003, 154, 1019, 79, 1027, 6, 1029, -98, 1025, -190, 1012, -273, 992, -353, 967, -422, 938, -518, 888, -608, 827, -687, 760, -769, 675, -841, 579, -896, 484, -943, 382, -979, 271, -998, 183, -1006, 114, -1010, 55, -1012, -1, -1008, -77, -1000, -143, -986, -214, -968, -283, -949, -339, -923, -401, -905, -440, -887, -476, -865, -512, -842, -550, -815, -589, -790, -622, -763, -655, -735, -687, -707, -715, -678, -742, -651, -767, -621, -790, -591, -814, -559, -836, -530, -854, -501, -871, -469, -889, -442, -903, -411, -917, -375, -932, -346, -943, -310, -957, -278, -967, -236, -978, -196, -986, -157, -992, -124, -997, -91, -1000, -56, -1003, -6, -1004, -7, -1046, -83, -1043, -305, -1000, -508, -905, -814, -674, -945, -446, -1035, -206, -1048, 114, -1004, 393, -897, 577, -737, 770, -525, 935, -322, 1017, -68, 1074, 146, 1068, 428, 984, 718, 814, 894, 548, 1004, 270, 1072, 24, 1015, -253, 917, -511, 764, -728, 455, -949, 134, -1042, -4, -1046, -5, -1004)
+
+[node name="blackHole" parent="." instance=ExtResource("2_fsm7d")]
+position = Vector2(-379, -145)
+scale = Vector2(1.72, 1.72)
+
+[node name="player" parent="." instance=ExtResource("3_qj4xj")]
+position = Vector2(430, 0)
+scale = Vector2(0.145, 0.145)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+
+[node name="FoodSpawnCooldown" type="Timer" parent="."]
+autostart = true
+
+[node name="AntiFoodBactCooldown" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
+[connection signal="timeout" from="FoodSpawnCooldown" to="." method="_on_food_spawn_cooldown_timeout"]
+[connection signal="timeout" from="AntiFoodBactCooldown" to="." method="_on_anti_food_bact_cooldown_timeout"]
