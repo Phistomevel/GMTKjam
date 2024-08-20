@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h58ha"]
 size = Vector2(460.572, 148.38)
 
-[node name="ediblewall" type="RigidBody2D" groups=["collateral"]]
+[node name="ediblewall" type="RigidBody2D" groups=["collateral", "food"]]
 z_index = 4
 physics_material_override = ExtResource("1_hcyyi")
 gravity_scale = 0.0
