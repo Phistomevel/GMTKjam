@@ -3,6 +3,12 @@ extends Node2D
 signal gameOver
 
 var progress : int = 0
+var fuel1 : bool = true
+var fuel2 : bool = true
+var fuel3 : bool = true
+var fuel4 : bool = true
+var fuel5 : bool = true
+
 
 func _ready():
 	%EXIT.visible = false
