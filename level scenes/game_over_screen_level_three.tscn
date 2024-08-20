@@ -1,0 +1,154 @@
+[gd_scene load_steps=7 format=3 uid="uid://dripsaxpbxx5n"]
+
+[ext_resource type="Script" path="res://scripts/game_over_screen_level_three.gd" id="1_3ulsl"]
+[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="1_k54re"]
+[ext_resource type="FontFile" uid="uid://00nwufw06k7x" path="res://fonts/Action.otf" id="2_wn8y3"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_jt5ap"]
+thickness = 0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_47j23"]
+thickness = 0
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5bvku"]
+thickness = 0
+
+[node name="Game_Over_Screen_Level_Three" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ulsl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k54re")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Control" type="Control" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(566, 65)
+alignment = 1
+
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+theme_override_styles/separator = SubResource("StyleBoxLine_jt5ap")
+
+[node name="Control" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer/Control/HBoxContainer/Control"]
+layout_mode = 2
+offset_left = 4.0
+offset_top = 41.0
+offset_right = 104.0
+offset_bottom = 89.0
+rotation = -0.174533
+pivot_offset = Vector2(104.26, 48)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wn8y3")
+theme_override_font_sizes/font_size = 50
+text = "GAME"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 120
+theme_override_styles/separator = SubResource("StyleBoxLine_jt5ap")
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+theme_override_styles/separator = SubResource("StyleBoxLine_47j23")
+
+[node name="Control3" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBoxContainer/MarginContainer/Control/HBoxContainer/Control3"]
+layout_mode = 2
+offset_left = -113.0
+offset_top = 41.0
+offset_right = -4.0
+offset_bottom = 89.0
+rotation = 0.174533
+pivot_offset = Vector2(0, 48)
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_wn8y3")
+theme_override_font_sizes/font_size = 50
+text = "OVER"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="StartGameButton" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_wn8y3")
+theme_override_font_sizes/font_size = 30
+text = "Restart"
+
+[node name="StartGameButton2" type="Button" parent="VBoxContainer/MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_wn8y3")
+theme_override_font_sizes/font_size = 30
+text = "Main menu"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/separator = SubResource("StyleBoxLine_5bvku")
+
+[node name="OptionsButton" type="Button" parent="."]
+modulate = Color(1, 0.615686, 0.337255, 1)
+offset_left = 1088.0
+offset_top = 23.0
+offset_right = 1119.0
+offset_bottom = 54.0
+size_flags_horizontal = 4
+text = "🎵"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/VBoxContainer/StartGameButton2" to="." method="_on_start_game_button_2_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
