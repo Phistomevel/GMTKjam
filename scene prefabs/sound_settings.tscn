@@ -70,6 +70,7 @@ step = 0.01
 busName = "Master"
 
 [node name="MasterValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(42, 0)
 layout_mode = 2
 text = "0%"
 
@@ -85,6 +86,7 @@ step = 0.01
 busName = "Music"
 
 [node name="MusicValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(42, 0)
 layout_mode = 2
 text = "0%"
 
@@ -100,6 +102,7 @@ step = 0.01
 busName = "Sound"
 
 [node name="SoundValue" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(42, 0)
 layout_mode = 2
 text = "0%"
 
