@@ -1,5 +1,7 @@
 extends Control
 
+signal finished
+
 @export_group("Charaktere")
 @export var SpeakerList : Array[String] = []
 @export var SpeakerPics : Array[Resource] = []
@@ -78,5 +80,5 @@ func convo():
 	else:
 		if killtween:
 			killtween.kill()
-		get_tree().paused = false
+		finished.emit()
 		queue_free()

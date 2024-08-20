@@ -21,6 +21,9 @@ func _process(delta):
 		%EXIT.visible = true
 		%ExitArea.monitoring = true
 	
+	if Input.is_action_just_pressed("ui_cancel"):
+		pause()
+	
 
 func _on_exit_area_body_entered(body):
 	if(body.name =="player"):
@@ -85,3 +88,7 @@ func _on_fuel_area_5_body_entered(body):
 
 func _on_black_hole_level_3_game_lost():
 	SceneTransition.change_scene("res://level scenes/game_over_level_3.tscn")
+	
+func pause():
+	get_tree().paused = true
+	$player/Camera2D/PauseScreen.visible = true

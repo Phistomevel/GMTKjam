@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://bybfhgca8iyvm"]
+[gd_scene load_steps=29 format=3 uid="uid://bybfhgca8iyvm"]
 
 [ext_resource type="PackedScene" uid="uid://24ku1ewgiug7" path="res://scene prefabs/level2/ediblewall.tscn" id="1_kwkjo"]
 [ext_resource type="Script" path="res://scripts/level_two.gd" id="1_xc3wy"]
 [ext_resource type="Texture2D" uid="uid://bvbqa1jegsova" path="res://assets/tisch/tisch/sh_tisch_chemie.png" id="4_66p1i"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="4_j6ual"]
+[ext_resource type="PackedScene" uid="uid://cbllu3tyrxgm" path="res://scene prefabs/pause_screen.tscn" id="4_nqca1"]
 [ext_resource type="Texture2D" uid="uid://d4ji1unmj84ww" path="res://assets/tisch/tisch/sh_tisch_chemie_bücher.png" id="5_fhso6"]
 [ext_resource type="Texture2D" uid="uid://dyxbjnwfc7dxs" path="res://assets/tisch/tisch/sh_tisch_alles.png" id="6_2fmk1"]
 [ext_resource type="PackedScene" uid="uid://ch2oxh3rsa2fr" path="res://scene prefabs/level2/pressure_plate.tscn" id="6_amgrm"]
@@ -70,6 +71,8 @@ limit_top = 0
 limit_right = 1144
 limit_bottom = 3500
 limit_smoothed = true
+
+[node name="PauseScreen" parent="player/Camera2D" instance=ExtResource("4_nqca1")]
 
 [node name="Walls" type="Node" parent="."]
 

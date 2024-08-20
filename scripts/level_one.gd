@@ -30,12 +30,9 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		pause()
 	
-	
-	
-	if !%VisualNovel:
-		%CanvasLayer.visible = true
-		%Sprite2D.visible = false
-		get_tree().paused = false
+		
+
+
 
 func randomPointOnMap():
 	var a = randf()
@@ -114,3 +111,9 @@ func first_level_dialogue():
 	dia.SpeakerTurn = [1, 1, 0, 1, 0, 1, 0 ,1 ,0, 1, 0]
 	# Avatars
 	add_child(dia)
+
+
+func _on_visual_novel_finished():
+	%CanvasLayer.visible = true
+	%Sprite2D.visible = false
+	get_tree().paused = false

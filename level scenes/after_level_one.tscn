@@ -32,3 +32,5 @@ SpeakerPics = Array[Resource]([ExtResource("2_3abaa"), ExtResource("3_5e5o5")])
 SpeakerPos = Array[int]([0, 1])
 ConvoList = Array[String](["Ahhh! ", "*Beep* Analyzing situation...", "It grew too much!", "*Beep* Formulating plan B...", "What is plan B ?!?!", "… ... ...", "The black hole has too much mass! It will devour us!", "... ... ...", "...", "Calculations finished. Leave the laboratory as fast as possible.", "Activate emergancy protocol phase two. Close all doors.", "That does not help!", "See you at the Exit."])
 SpeakerTurn = Array[int]([0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1])
+
+[connection signal="finished" from="VisualNovel" to="." method="_on_visual_novel_finished"]

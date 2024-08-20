@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d2ainclj7k5sj" path="res://scene prefabs/antifood_bacterium.tscn" id="11_el8pn"]
 
 [node name="Level_One" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_0fsi3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -95,3 +96,4 @@ rotation = -0.688802
 [connection signal="gameWon" from="player/Camera2D/CanvasLayer" to="." method="_on_canvas_layer_game_won"]
 [connection signal="timeout" from="FoodSpawnCooldown" to="." method="_on_food_spawn_cooldown_timeout"]
 [connection signal="timeout" from="AntiFoodBactCooldown" to="." method="_on_anti_food_bact_cooldown_timeout"]
+[connection signal="finished" from="VisualNovel" to="." method="_on_visual_novel_finished"]

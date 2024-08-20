@@ -134,6 +134,7 @@ theme_override_styles/separator = SubResource("StyleBoxLine_gl7io")
 
 [node name="OptionsButton" type="Button" parent="."]
 modulate = Color(1, 0.615686, 0.337255, 1)
+layout_mode = 0
 offset_left = 1088.0
 offset_top = 23.0
 offset_right = 1119.0
