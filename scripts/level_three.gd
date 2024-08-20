@@ -24,6 +24,7 @@ func _process(delta):
 func _on_exit_area_body_entered(body):
 	if(body.name =="player"):
 		gameOver.emit()
+		SceneTransition.change_scene("res://level scenes/after_level_three.tscn")
 	pass 
 
 
@@ -79,3 +80,7 @@ func _on_fuel_area_5_body_entered(body):
 		progress += 1
 		fuel5 = false
 	pass
+
+
+func _on_black_hole_level_3_game_lost():
+	SceneTransition.change_scene("res://level scenes/game_over_level_3.tscn")
