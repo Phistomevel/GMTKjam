@@ -80,6 +80,7 @@ func _on_canvas_layer_game_won():
 
 func _on_black_hole_game_lost():
 	print("Sadge")
+	SceneTransition.change_scene("res://level scenes/game_over_screen.tscn")
 	pass # Replace with function body.
 
 func pause():
