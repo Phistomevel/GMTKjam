@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt5ut0mpkwp3x"]
+
+[ext_resource type="Texture2D" uid="uid://b1gl3lbyi1231" path="res://assets/risse/risse/riss3.png" id="1_4egq1"]
+
+[node name="riss3" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.52588e-05, -1.52588e-05)
+scale = Vector2(0.462037, 0.462037)
+texture = ExtResource("1_4egq1")
