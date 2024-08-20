@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgfhgkhbypyyn"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://diqqpqcyq2ksx" path="res://material/foodstuff.tres" id="1_go7oc"]
+[ext_resource type="Script" path="res://scripts/iron_door.gd" id="2_n0cd0"]
+[ext_resource type="Texture2D" uid="uid://bl7nywcoi28a0" path="res://assets/tür/tür/tür_zu.png" id="3_8wu1s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h58ha"]
+size = Vector2(1035.18, 590.953)
+
+[node name="iron_door" type="RigidBody2D" groups=["collateral", "red_door"]]
+physics_material_override = ExtResource("1_go7oc")
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+linear_damp = 6.24
+angular_damp = 100.0
+script = ExtResource("2_n0cd0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-7.62939e-06, 4.76837e-07)
+texture = ExtResource("3_8wu1s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 12
+position = Vector2(4.99931, -10.9993)
+rotation = -3.14159
+scale = Vector2(0.995, 0.995)
+shape = SubResource("RectangleShape2D_h58ha")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
