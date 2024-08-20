@@ -20,13 +20,22 @@ var foodShapes = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	first_level_dialogue()
+	#first_level_dialogue()
 	GlobalAudioPlayer.play_first_level_music()
+	%CanvasLayer.visible = false
+	#get_tree().paused = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		pause()
+	
+	
+	
+	if !%VisualNovel:
+		%CanvasLayer.visible = true
+		%Sprite2D.visible = false
+		get_tree().paused = false
 
 func randomPointOnMap():
 	var a = randf()
@@ -75,6 +84,9 @@ func _on_black_hole_above_critical():
 
 func _on_canvas_layer_game_won():
 	print("Yay")
+	# TODO: Besserer Übergang (zwischenszene mit level geschafft) 
+	# Fade effekt funktioniert nicht für szenen, die mit dialog beginnen!!!!!
+	get_tree().change_scene_to_file("res://level scenes/after_level_one.tscn")
 	pass # Replace with function body.
 
 
@@ -87,13 +99,19 @@ func pause():
 	get_tree().paused = true
 	$player/Camera2D/PauseScreen.visible = true
 
+
 func first_level_dialogue():
 	var dia = preload("res://scene prefabs/visual_novel.tscn").instantiate()
 	# TODO: implement actual dialogue
-	# dia.SpeakerList = ["Bill II.", "Computer"]
-	# dia.Pics = []
-	# dia.SpeakerPos = [0, 1]
-	# dia.ConvoList = ["Lorem ipsum"]
-	# dia.SpeakerTurn = [0]
+	
+	dia.SpeakerList = ["Bill II.", "Computer"]
+	dia.Pics = ["res://assets/temp/BillFull.png", "res://assets/temp/JukeBot.png"]
+	dia.SpeakerPos = [0, 1]
+	dia.ConvoList = ["*Beep* *Beep*", "Emergency! Alert! Alert! A blackhole has appeared in petri dish 02!",
+	 "What? Black holes don't just appear out of nowhere!", "Alert! Alert! A black hole has appeared in petri dish 02! Emergency protocol activated!",
+	"...I didn't even set an emergency protocol. Anyways, what do I have to do?", "Prevent black hole from reaching CRITICIAL MASS!!! and try to hold it under critical mass for 5 seconds.",
+	"Alright, sounds easy enough. Wait, how do I make the black hole have less mass?", "Petri dish 02 contains the special bacteria, which you have developed yourself, that convert matter to antimatter.",
+	"Ah yeah, I forgot about that.", "Emergency! Emergency!", "I've heard you the first time!"]
+	dia.SpeakerTurn = [1, 1, 0, 1, 0, 1, 0 ,1 ,0, 1, 0]
 	# Avatars
 	add_child(dia)

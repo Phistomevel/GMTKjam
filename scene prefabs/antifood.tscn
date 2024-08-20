@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpe2vrspc3fyy"]
+[gd_scene load_steps=3 format=3 uid="uid://p5owaohfypfl"]
 
 [ext_resource type="Script" path="res://scripts/antifood.gd" id="1_ud3xu"]
 [ext_resource type="Texture2D" uid="uid://dxeljo2b5tw7v" path="res://assets/Antifood/AntiMatter_3.png" id="2_wl0f6"]
