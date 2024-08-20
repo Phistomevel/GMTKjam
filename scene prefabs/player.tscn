@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c52dshixcdhha" path="res://assets/player_rechterArm.png" id="3_5cdr4"]
 [ext_resource type="Texture2D" uid="uid://dt33io2qjuh35" path="res://assets/player_nurKopf.png" id="4_v3r35"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjc7e"]
-size = Vector2(666, 753)
+[sub_resource type="CircleShape2D" id="CircleShape2D_kgi5y"]
+radius = 314.86
 
 [sub_resource type="Animation" id="Animation_ve4mv"]
 resource_name = "Walking"
@@ -45,8 +45,7 @@ _data = {
 script = ExtResource("1_erqey")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 120.5)
-shape = SubResource("RectangleShape2D_bjc7e")
+shape = SubResource("CircleShape2D_kgi5y")
 
 [node name="Node2D" type="AnimationPlayer" parent="."]
 libraries = {
