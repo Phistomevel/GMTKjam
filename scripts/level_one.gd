@@ -84,9 +84,8 @@ func _on_black_hole_above_critical():
 
 func _on_canvas_layer_game_won():
 	print("Yay")
-	# TODO: Besserer Übergang (zwischenszene mit level geschafft) 
-	# Fade effekt funktioniert nicht für szenen, die mit dialog beginnen!!!!!
-	get_tree().change_scene_to_file("res://level scenes/after_level_one.tscn")
+	#get_tree().change_scene_to_file("res://level scenes/after_level_one.tscn")
+	SceneTransition.change_scene("res://level scenes/after_level_one_transition.tscn")
 	pass # Replace with function body.
 
 
