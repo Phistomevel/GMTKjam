@@ -1,26 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://d3yomwrrcywb7"]
+[gd_scene load_steps=7 format=3 uid="uid://iknabasgledu"]
 
-[ext_resource type="Script" path="res://AfterLevelOneTransition.gd" id="1_cy2yt"]
-[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="2_jxrgo"]
-[ext_resource type="FontFile" uid="uid://00nwufw06k7x" path="res://fonts/Action.otf" id="3_8bg80"]
+[ext_resource type="Script" path="res://level scenes/after_level_two_transition.gd" id="1_3fak6"]
+[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="1_y6k7j"]
+[ext_resource type="FontFile" uid="uid://00nwufw06k7x" path="res://fonts/Action.otf" id="2_dccsv"]
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_h7q7n"]
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_dp86k"]
 thickness = 0
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_jjwty"]
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_r6ka1"]
 thickness = 0
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_3l0ed"]
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_gl7io"]
 thickness = 0
 
-[node name="AfterLevelOneTransition" type="Control"]
+[node name="After_level_two_transition" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_cy2yt")
+script = ExtResource("1_3fak6")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -29,7 +29,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_jxrgo")
+texture = ExtResource("1_y6k7j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -64,7 +64,7 @@ alignment = 1
 [node name="VSeparator3" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 25
-theme_override_styles/separator = SubResource("StyleBoxLine_h7q7n")
+theme_override_styles/separator = SubResource("StyleBoxLine_dp86k")
 
 [node name="Control" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
 layout_direction = 1
@@ -79,19 +79,19 @@ offset_bottom = 89.0
 rotation = -0.174533
 pivot_offset = Vector2(104.26, 48)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_8bg80")
+theme_override_fonts/font = ExtResource("2_dccsv")
 theme_override_font_sizes/font_size = 50
 text = "Level"
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 120
-theme_override_styles/separator = SubResource("StyleBoxLine_h7q7n")
+theme_override_styles/separator = SubResource("StyleBoxLine_dp86k")
 
 [node name="VSeparator2" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 100
-theme_override_styles/separator = SubResource("StyleBoxLine_jjwty")
+theme_override_styles/separator = SubResource("StyleBoxLine_r6ka1")
 
 [node name="Control3" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
 layout_mode = 2
@@ -105,7 +105,7 @@ offset_bottom = 89.0
 rotation = 0.174533
 pivot_offset = Vector2(0, 48)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_8bg80")
+theme_override_fonts/font = ExtResource("2_dccsv")
 theme_override_font_sizes/font_size = 50
 text = "Won"
 
@@ -123,18 +123,17 @@ alignment = 1
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_fonts/font = ExtResource("3_8bg80")
+theme_override_fonts/font = ExtResource("2_dccsv")
 theme_override_font_sizes/font_size = 30
-text = "Level two"
+text = "Level three"
 
 [node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/separator = SubResource("StyleBoxLine_3l0ed")
+theme_override_styles/separator = SubResource("StyleBoxLine_gl7io")
 
 [node name="OptionsButton" type="Button" parent="."]
 modulate = Color(1, 0.615686, 0.337255, 1)
-layout_mode = 0
 offset_left = 1088.0
 offset_top = 23.0
 offset_right = 1119.0

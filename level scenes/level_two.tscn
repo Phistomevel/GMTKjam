@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://btt66vljbxabu"]
+[gd_scene load_steps=28 format=3 uid="uid://bybfhgca8iyvm"]
 
 [ext_resource type="PackedScene" uid="uid://24ku1ewgiug7" path="res://scene prefabs/level2/ediblewall.tscn" id="1_kwkjo"]
+[ext_resource type="Script" path="res://scripts/level_two.gd" id="1_xc3wy"]
 [ext_resource type="Texture2D" uid="uid://bvbqa1jegsova" path="res://assets/tisch/tisch/sh_tisch_chemie.png" id="4_66p1i"]
-[ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scripts/player.tscn" id="4_j6ual"]
+[ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="4_j6ual"]
 [ext_resource type="Texture2D" uid="uid://d4ji1unmj84ww" path="res://assets/tisch/tisch/sh_tisch_chemie_bücher.png" id="5_fhso6"]
 [ext_resource type="Texture2D" uid="uid://dyxbjnwfc7dxs" path="res://assets/tisch/tisch/sh_tisch_alles.png" id="6_2fmk1"]
 [ext_resource type="PackedScene" uid="uid://ch2oxh3rsa2fr" path="res://scene prefabs/level2/pressure_plate.tscn" id="6_amgrm"]
@@ -16,11 +17,10 @@
 [ext_resource type="Texture2D" uid="uid://dwfodhw6qydch" path="res://assets/tisch/tisch/tisch_bücher.png" id="11_qkeh4"]
 [ext_resource type="Texture2D" uid="uid://d3n8csrk1b48c" path="res://assets/druckplatte/druckplatte/druckplatte_gedrückt.png" id="12_ceqax"]
 [ext_resource type="Texture2D" uid="uid://d23nje8vpdy6d" path="res://assets/tür/tür/tür_offen.png" id="14_8o85q"]
-[ext_resource type="PackedScene" uid="uid://dgr58l7ts7b28" path="res://scene prefabs/level2/siren.tscn" id="19_r477y"]
+[ext_resource type="PackedScene" path="res://scene prefabs/level2/siren.tscn" id="19_r477y"]
 [ext_resource type="Texture2D" uid="uid://i8xj5unjdaif" path="res://assets/LabFloor.png" id="20_3ls4g"]
 [ext_resource type="PackedScene" uid="uid://l53ag6toww2s" path="res://scene prefabs/level2/black_hole_lvl_2.tscn" id="20_8e4bc"]
 [ext_resource type="Texture2D" uid="uid://cs1475mug7lwo" path="res://assets/klon/klon/sh_klon.png" id="20_c6gsr"]
-[ext_resource type="PackedScene" uid="uid://brtl7qm7720x4" path="res://scene prefabs/food.tscn" id="21_g2q33"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dh4ws"]
 size = Vector2(136, 5146)
@@ -42,6 +42,14 @@ height = 2487.64
 size = Vector2(470, 162)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_xc3wy")
+
+[node name="level2_finishline" type="Area2D" parent="."]
+z_index = 3
+position = Vector2(-2, -28)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="level2_finishline"]
+polygon = PackedVector2Array(136, 3383, 130, 3453, 229, 3458, 229, 3384, 194, 3384, 163, 3384)
 
 [node name="LabFloor" type="Sprite2D" parent="."]
 position = Vector2(-363.5, 2863)
@@ -60,7 +68,7 @@ zoom = Vector2(1.095, 1.095)
 limit_left = 0
 limit_top = 0
 limit_right = 1144
-limit_bottom = 8260
+limit_bottom = 3500
 limit_smoothed = true
 
 [node name="Walls" type="Node" parent="."]
@@ -334,7 +342,7 @@ position = Vector2(631.415, 2416)
 [node name="box" parent="other" instance=ExtResource("8_6ucor")]
 position = Vector2(271.415, 1528)
 
-[node name="RigidBody2D5" type="RigidBody2D" parent="other" groups=["collateral"]]
+[node name="RigidBody2D5" type="RigidBody2D" parent="other"]
 position = Vector2(389.007, 2575.27)
 rotation = 1.57079
 scale = Vector2(0.0908542, 0.0908542)
@@ -405,9 +413,7 @@ scale = Vector2(0.035, 0.035)
 
 [node name="Marker2D" type="Marker2D" parent="blackHole_level_2"]
 
-[node name="food" parent="." instance=ExtResource("21_g2q33")]
-position = Vector2(480, 1495)
-
+[connection signal="body_entered" from="level2_finishline" to="." method="_on_level_2_finishline_body_entered"]
 [connection signal="activated" from="Doors/PressurePlate" to="Doors/PressurePlate" method="open"]
 [connection signal="activated" from="Doors/PressurePlate" to="Doors/iron_door" method="open"]
 [connection signal="deactivated" from="Doors/PressurePlate" to="Doors/PressurePlate" method="close"]
@@ -432,3 +438,4 @@ position = Vector2(480, 1495)
 [connection signal="activated" from="Doors/PressurePlate6" to="Doors/PressurePlate6" method="open"]
 [connection signal="deactivated" from="Doors/PressurePlate6" to="Doors/iron_door6" method="close"]
 [connection signal="deactivated" from="Doors/PressurePlate6" to="Doors/PressurePlate6" method="close"]
+[connection signal="gameLost" from="blackHole_level_2" to="." method="_on_black_hole_level_2_game_lost"]
