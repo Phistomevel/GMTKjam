@@ -11,6 +11,7 @@ var fuel5 : bool = true
 
 
 func _ready():
+	GlobalAudioPlayer.play_third_level_music()
 	%EXIT.visible = false
 	%ExitArea.monitoring = false
 
