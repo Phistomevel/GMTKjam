@@ -3,6 +3,10 @@ extends AudioStreamPlayer
 # Musik
 const menu_music = preload("res://Audio/RandomVibeAudioSample.mp3")
 const first_level_music = preload("res://Audio/RandomPuzzleGameAudioSample.mp3")
+const second_level_music = preload("res://Audio/RandomHeavyIndustryAudioSample.mp3")
+const third_level_music = preload("res://Audio/RandomHecticNightAudioSample.mp3")
+
+# Sound
 const click = preload("res://Audio/click.wav")
 
 func _play_music(music: AudioStream, volume=0.0):
@@ -18,6 +22,12 @@ func play_menu_music():
 	
 func play_first_level_music():
 	_play_music(first_level_music, -14.0)
+	
+func play_second_level_music():
+	_play_music(second_level_music, -8.0)
+	
+func play_third_level_music():
+	_play_music(third_level_music, -10.0)
 	
 func play_sound(sound: AudioStream, volume=-4.0):
 	var sound_player = AudioStreamPlayer.new()

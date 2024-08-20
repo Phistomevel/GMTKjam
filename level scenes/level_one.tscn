@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://v6lbsnqd8t4x" path="res://assets/level_one_map/map.png" id="1_i5y0m"]
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_fsm7d"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="3_qj4xj"]
-[ext_resource type="PackedScene" path="res://scene prefabs/level1_hud.tscn" id="5_1wje2"]
+[ext_resource type="PackedScene" uid="uid://ds3fmrqty47dp" path="res://scene prefabs/level1_hud.tscn" id="5_1wje2"]
 [ext_resource type="PackedScene" uid="uid://cbllu3tyrxgm" path="res://scene prefabs/pause_screen.tscn" id="6_nciwl"]
 [ext_resource type="PackedScene" uid="uid://c37d8kn12ekpu" path="res://scene prefabs/visual_novel.tscn" id="7_f2ybp"]
 [ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="7_tdxxs"]
