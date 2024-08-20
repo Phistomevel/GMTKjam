@@ -8,6 +8,7 @@ func _ready():
 func _on_start_game_button_pressed():
 	GlobalAudioPlayer.play_click()
 	SceneTransition.change_scene("res://level scenes/level_one.tscn")
+	# SceneTransition.change_scene("res://level scenes/level_two.tscn")
 
 
 func _on_options_button_pressed():

@@ -1,9 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://cnb4mfcqg6qwa"]
+[gd_scene load_steps=23 format=3 uid="uid://bybfhgca8iyvm"]
 
 [ext_resource type="PackedScene" uid="uid://24ku1ewgiug7" path="res://scene prefabs/level2/ediblewall.tscn" id="1_kwkjo"]
 [ext_resource type="Texture2D" uid="uid://csk0i8iysdhqj" path="res://assets/oldpaper.png" id="3_k364b"]
 [ext_resource type="Texture2D" uid="uid://bvbqa1jegsova" path="res://assets/tisch/tisch/sh_tisch_chemie.png" id="4_66p1i"]
-[ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scripts/player.tscn" id="4_j6ual"]
+[ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="4_j6ual"]
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="5_4e7i7"]
 [ext_resource type="Texture2D" uid="uid://d4ji1unmj84ww" path="res://assets/tisch/tisch/sh_tisch_chemie_bücher.png" id="5_fhso6"]
 [ext_resource type="Texture2D" uid="uid://dyxbjnwfc7dxs" path="res://assets/tisch/tisch/sh_tisch_alles.png" id="6_2fmk1"]
@@ -263,6 +263,7 @@ position = Vector2(1031, 3256)
 scale = Vector2(0.1, 0.1)
 
 [node name="blackHole" parent="." instance=ExtResource("5_4e7i7")]
+z_index = 11
 position = Vector2(402.105, 114.33)
 scale = Vector2(0.13, 0.13)
 speed = null

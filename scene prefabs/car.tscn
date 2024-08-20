@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://byl4nh11gw16j"]
+
+[ext_resource type="Texture2D" uid="uid://ba2qsxttxqtqj" path="res://assets/level_three/AUTOS/auto_lila.png" id="1_5aeyh"]
+[ext_resource type="Script" path="res://scripts/car.gd" id="1_c0ncj"]
+[ext_resource type="PhysicsMaterial" uid="uid://diqqpqcyq2ksx" path="res://material/foodstuff.tres" id="1_onvyv"]
+
+[node name="Car" type="RigidBody2D" groups=["food"]]
+mass = 12.41
+physics_material_override = ExtResource("1_onvyv")
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 12.277
+angular_damp = 100.0
+script = ExtResource("1_c0ncj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.36, 0.36)
+texture = ExtResource("1_5aeyh")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.36, 0.36)
+polygon = PackedVector2Array(-703, -360, -694, -385, -677, -399, -667, -397, -662, -387, -667, -375, -648, -366, -637, -380, -590, -389, -553, -393, -503, -395, -491, -395, -490, -407, -482, -411, -319, -415, -256, -413, -248, -406, -247, -390, -210, -387, -208, -403, -203, -421, -201, -435, -172, -449, -151, -452, -142, -446, -144, -433, -150, -416, -167, -383, -59, -378, -13, -373, 16, -372, 114, -372, 166, -372, 214, -372, 265, -374, 333, -379, 333, -393, 338, -400, 353, -403, 407, -406, 498, -410, 530, -410, 538, -404, 540, -399, 646, -394, 695, -373, 722, -363, 737, -338, 743, -299, 745, -262, 750, -227, 751, -169, 750, -130, 759, -132, 769, -129, 764, -88, 762, -13, 761, 26, 760, 64, 749, 67, 737, 58, 732, 148, 730, 190, 734, 262, 726, 315, 712, 339, 670, 361, 618, 374, 550, 376, 541, 386, 525, 391, 459, 388, 382, 387, 356, 383, 342, 373, 339, 358, 255, 356, 150, 354, 89, 351, 39, 351, 11, 352, -28, 357, -74, 358, -161, 367, -160, 377, -141, 421, -147, 428, -158, 431, -177, 427, -192, 418, -200, 391, -202, 371, -229, 373, -230, 383, -240, 391, -296, 397, -355, 400, -460, 397, -478, 396, -486, 387, -487, 373, -565, 367, -604, 358, -628, 342, -642, 325, -670, 351, -650, 365, -656, 371, -672, 371, -693, 356, -705, 337, -717, 306, -723, 271, -724, 239, -731, 173, -730, 131, -732, 64, -736, -23, -735, -98, -729, -147, -723, -234, -712, -320)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

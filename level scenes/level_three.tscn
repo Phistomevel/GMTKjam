@@ -1,0 +1,415 @@
+[gd_scene load_steps=15 format=3 uid="uid://cgv2s16ofyy5"]
+
+[ext_resource type="Texture2D" uid="uid://cnlj7glb86tbo" path="res://assets/level_three/level_three_map/strasse.png" id="1_ng65c"]
+[ext_resource type="Script" path="res://scripts/level_three.gd" id="1_w6eck"]
+[ext_resource type="Texture2D" uid="uid://cbphbmr1yjgvm" path="res://assets/level_three/level_three_map/mapAnfang.png" id="2_4717p"]
+[ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="3_2nwvk"]
+[ext_resource type="Texture2D" uid="uid://bf01yn5cfbgm8" path="res://assets/level_three/LLIB/raumschiff.png" id="4_3hq5m"]
+[ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="4_uye01"]
+[ext_resource type="Texture2D" uid="uid://pasud5uwko3r" path="res://assets/level_three/level_three_map/busch.png" id="5_ak7e5"]
+[ext_resource type="PackedScene" uid="uid://byl4nh11gw16j" path="res://scene prefabs/car.tscn" id="5_bjxuq"]
+[ext_resource type="Texture2D" uid="uid://cyqf5wa1qpdld" path="res://assets/level_three/AUTOS/auto_türkis.png" id="8_3wn5u"]
+[ext_resource type="PackedScene" uid="uid://drwg2le4ul65m" path="res://scene prefabs/barrel.tscn" id="9_8nwl1"]
+[ext_resource type="Texture2D" uid="uid://dj48m2p8uxm8w" path="res://assets/level_three/LLIB/exitSymbol.png" id="10_ge4ea"]
+[ext_resource type="Texture2D" uid="uid://bnbjdk7wg2chp" path="res://assets/level_three/LLIB/fuelSymbol.png" id="11_j7rkl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h4isy"]
+radius = 491.526
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hb0ty"]
+radius = 492.091
+
+[node name="Level_Three" type="Node2D"]
+script = ExtResource("1_w6eck")
+
+[node name="mapp" type="Sprite2D" parent="."]
+position = Vector2(2160, -4316)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D4" type="Sprite2D" parent="mapp"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="mapp"]
+position = Vector2(0, -4320)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="mapp"]
+position = Vector2(0, -6479)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="mapp"]
+position = Vector2(0, -8635)
+texture = ExtResource("5_ak7e5")
+
+[node name="mappp" type="Sprite2D" parent="."]
+position = Vector2(-2159, -4316)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D4" type="Sprite2D" parent="mappp"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="mappp"]
+position = Vector2(0, -4320)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="mappp"]
+position = Vector2(0, -6479)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="mappp"]
+position = Vector2(0, -8635)
+texture = ExtResource("5_ak7e5")
+
+[node name="mapppp" type="Sprite2D" parent="."]
+position = Vector2(0, -4316)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="mapppp"]
+position = Vector2(0, -2156)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D4" type="Sprite2D" parent="mapppp"]
+position = Vector2(0, -4315)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D5" type="Sprite2D" parent="mapppp"]
+position = Vector2(0, -6473)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D6" type="Sprite2D" parent="mapppp"]
+position = Vector2(0, -8633)
+texture = ExtResource("1_ng65c")
+
+[node name="mappppp" type="Sprite2D" parent="."]
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D18" type="Sprite2D" parent="mappppp"]
+position = Vector2(0, -2159)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="mappppp/Sprite2D18"]
+position = Vector2(0, 4319)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D3" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2"]
+position = Vector2(0, 2159)
+texture = ExtResource("1_ng65c")
+
+[node name="Sprite2D4" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3"]
+position = Vector2(0, 2158)
+texture = ExtResource("2_4717p")
+
+[node name="Sprite2D5" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4"]
+position = Vector2(-2159, 1)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D6" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5"]
+position = Vector2(2, 2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D7" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6"]
+position = Vector2(2157, -1)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D8" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7"]
+position = Vector2(2159, 1)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D9" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D10" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9"]
+position = Vector2(0, -2159)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D11" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D12" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11"]
+position = Vector2(-4317, 2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D13" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D14" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13"]
+position = Vector2(0, -2156)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D15" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13/Sprite2D14"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D16" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13/Sprite2D14/Sprite2D15"]
+position = Vector2(4316, 2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="Sprite2D17" type="Sprite2D" parent="mappppp/Sprite2D18/Sprite2D2/Sprite2D3/Sprite2D4/Sprite2D5/Sprite2D6/Sprite2D7/Sprite2D8/Sprite2D9/Sprite2D10/Sprite2D11/Sprite2D12/Sprite2D13/Sprite2D14/Sprite2D15/Sprite2D16"]
+position = Vector2(0, -2160)
+texture = ExtResource("5_ak7e5")
+
+[node name="raumschiff" type="Sprite2D" parent="."]
+position = Vector2(-33.0001, -12032)
+rotation = -0.120428
+scale = Vector2(0.745, 0.745)
+texture = ExtResource("4_3hq5m")
+
+[node name="Car" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(342, 5769)
+rotation = 0.92447
+sprite = ExtResource("8_3wn5u")
+
+[node name="raumschiff_collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="raumschiff_collision"]
+polygon = PackedVector2Array(-447, -11636, -339, -11544, -297, -11572, -308, -11592, -236, -11641, -192, -11622, -134, -11610, -72, -11605, -45, -11605, -56, -11649, 153, -11684, 159, -11660, 156, -11640, 216, -11673, 268, -11707, 313, -11747, 403, -11753, 398, -11744, 432, -11718, 507, -11828, 467, -11853, 459, -11845, 437, -11940, 453, -11996, 471, -11972, 503, -11970, 529, -11988, 537, -12016, 543, -12089, 540, -12168, 528, -12241, 510, -12310, 488, -12356, 458, -12388, 437, -12407, 405, -12405, 387, -12385, 341, -12442, 327, -12457, 317, -12574, 330, -12600, 257, -12653, 235, -12624, 148, -12581, 76, -12608, -2, -12618, -84, -12618, -157, -12606, -235, -12581, -301, -12550, -363, -12506, -392, -12482, -520, -12472, -516, -12483, -557, -12503, -587, -12454, -609, -12412, -584, -12392, -527, -12264, -542, -12205, -549, -12225, -577, -12242, -591, -12238, -612, -12206, -629, -12119, -631, -12018, -615, -11945, -590, -11881, -557, -11826, -508, -11786, -476, -11793, -464, -11823, -447, -11807, -429, -11784, -413, -11651)
+
+[node name="map" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="map"]
+polygon = PackedVector2Array(-765, 6877, -757, -14031, -3233, -14017, -3239, 9715, 3241, 9717, 3247, -14037, 671, -14022, 669, 6839, 553, 6850, 488, 7061, 519, 7155, 544, 7173, 533, 7305, 396, 7339, 317, 7341, 261, 7317, 225, 7429, 236, 7516, 92, 7459, -25, 7429, -29, 7447, -87, 7374, -140, 7298, -179, 7209, -258, 7316, -279, 7178, -411, 7235, -389, 7095, -367, 6960, -453, 6957, -410, 6822, -515, 6833, -643, 6849)
+
+[node name="player" parent="." instance=ExtResource("3_2nwvk")]
+z_index = 3
+position = Vector2(-73, 6123)
+scale = Vector2(0.185, 0.185)
+speed = 500
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.525, 0.525)
+
+[node name="blackHole" parent="." instance=ExtResource("4_uye01")]
+z_index = 1
+position = Vector2(89, 7129)
+scale = Vector2(3.155, 3.155)
+
+[node name="Car2" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-463, 4845)
+rotation = -1.83864
+
+[node name="Car3" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(349, 4233)
+rotation = 1.57817
+
+[node name="Car4" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-324, 4093)
+rotation = 5.67614
+sprite = ExtResource("8_3wn5u")
+
+[node name="Car5" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-111, 3088)
+rotation = 7.14553
+
+[node name="Car6" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(175, 1331)
+rotation = 6.66984
+sprite = ExtResource("8_3wn5u")
+
+[node name="Car7" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-424, -143)
+rotation = 9.08025
+sprite = ExtResource("8_3wn5u")
+
+[node name="Car8" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(383, -2365)
+rotation = 8.35054
+
+[node name="Car9" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-122, -1421)
+rotation = 4.59215
+
+[node name="Car10" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-31, -5389)
+rotation = 6.26236
+sprite = ExtResource("8_3wn5u")
+
+[node name="Car11" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-439, -3483)
+rotation = 8.56001
+sprite = ExtResource("8_3wn5u")
+
+[node name="Car12" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(69.0001, -7318)
+rotation = 5.51445
+
+[node name="Car13" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(212, -9086)
+rotation = 9.14662
+sprite = ExtResource("8_3wn5u")
+
+[node name="Car14" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-458, -8530)
+rotation = 4.03183
+
+[node name="Car15" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(147, -4717)
+rotation = 6.97962
+
+[node name="Car16" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(389, -10010)
+rotation = 7.14553
+
+[node name="Car17" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(496, -13732)
+rotation = 6.34438
+
+[node name="Car18" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-46, -13746)
+rotation = 6.11156
+
+[node name="Car19" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-534, -13774)
+rotation = 5.21862
+
+[node name="Barrel" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(306, 5122)
+rotation = 1.67338
+
+[node name="Barrel2" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-503, 3498)
+rotation = 4.9943
+
+[node name="Barrel3" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(471, 757)
+rotation = 0.151857
+
+[node name="Barrel4" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-42.0001, -1810)
+rotation = -2.38269
+
+[node name="Barrel5" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(294, -5127)
+rotation = -7.64568
+
+[node name="Barrel6" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-505, -7867)
+rotation = -6.11516
+
+[node name="Barrel7" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(326, -8483)
+rotation = -5.30439
+
+[node name="Barrel8" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(322, -13373)
+rotation = -8.11583
+
+[node name="Barrel13" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-547, -13362)
+rotation = -8.11583
+
+[node name="Barrel14" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-206, -10483)
+rotation = -8.11583
+
+[node name="Barrel15" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(13, -13352)
+rotation = -8.11583
+
+[node name="Barrel16" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-237, -13385)
+rotation = -8.11583
+
+[node name="Barrel9" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-404, -3943)
+rotation = -5.24274
+
+[node name="Barrel10" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(566, -3018)
+rotation = -5.24274
+
+[node name="Barrel11" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(-532, 1842)
+rotation = -6.20683
+
+[node name="Barrel12" parent="." instance=ExtResource("9_8nwl1")]
+position = Vector2(356, -7125)
+rotation = -6.20683
+
+[node name="EXIT" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(113, -11331)
+scale = Vector2(0.295, 0.295)
+texture = ExtResource("10_ge4ea")
+
+[node name="ExitArea" type="Area2D" parent="EXIT"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EXIT/ExitArea"]
+shape = SubResource("CircleShape2D_h4isy")
+
+[node name="FUEL" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-597, -11385)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("11_j7rkl")
+
+[node name="FuelArea" type="Area2D" parent="FUEL"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FUEL/FuelArea"]
+shape = SubResource("CircleShape2D_hb0ty")
+
+[node name="FUEL2" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-325, -11308)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("11_j7rkl")
+
+[node name="FuelArea2" type="Area2D" parent="FUEL2"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FUEL2/FuelArea2"]
+shape = SubResource("CircleShape2D_hb0ty")
+
+[node name="FUEL3" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-19, -11222)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("11_j7rkl")
+
+[node name="FuelArea3" type="Area2D" parent="FUEL3"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FUEL3/FuelArea3"]
+shape = SubResource("CircleShape2D_hb0ty")
+
+[node name="FUEL4" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(271, -11347)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("11_j7rkl")
+
+[node name="FuelArea4" type="Area2D" parent="FUEL4"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FUEL4/FuelArea4"]
+shape = SubResource("CircleShape2D_hb0ty")
+
+[node name="FUEL5" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(519, -11493)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("11_j7rkl")
+
+[node name="FuelArea5" type="Area2D" parent="FUEL5"]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FUEL5/FuelArea5"]
+shape = SubResource("CircleShape2D_hb0ty")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-768, -13551, -592, -13448, -544, -13448, -465, -13534, -421, -13612, -357, -13758, -328, -13606, -302, -13532, -274, -13514, -185, -13527, -119, -13541, -95, -13532, -89, -13561, 60, -13588, 85, -13582, 150, -13590, 167, -13599, 181, -13572, 201, -13582, 249, -13564, 344, -13558, 369, -13544, 385, -13554, 399, -13566, 492, -13566, 546, -13559, 560, -13551, 596, -13547, 630, -13543, 655, -13547, 682, -13549, 684, -13567, 519, -13577, 241, -13575, 173, -13611, 80, -13596, 49, -13602, -24, -13587, -284, -13529, -359, -13771, -485, -13528, -583, -13467, -810, -13623)
+
+[connection signal="body_entered" from="EXIT/ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="body_entered" from="FUEL/FuelArea" to="." method="_on_fuel_area_body_entered"]
+[connection signal="body_entered" from="FUEL2/FuelArea2" to="." method="_on_fuel_area_2_body_entered"]
+[connection signal="body_entered" from="FUEL3/FuelArea3" to="." method="_on_fuel_area_3_body_entered"]
+[connection signal="body_entered" from="FUEL4/FuelArea4" to="." method="_on_fuel_area_4_body_entered"]
+[connection signal="body_entered" from="FUEL5/FuelArea5" to="." method="_on_fuel_area_5_body_entered"]
