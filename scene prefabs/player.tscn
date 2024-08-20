@@ -41,7 +41,7 @@ _data = {
 "Walking": SubResource("Animation_ve4mv")
 }
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["collateral", "player"]]
 script = ExtResource("1_erqey")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

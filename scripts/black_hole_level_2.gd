@@ -12,14 +12,17 @@ const riss3 = preload("res://scene prefabs/level2/riss3.tscn")
 var size
 var foodList
 var closestFood
+var player
 
 var framesSinceSpawn: int
 var framesSinceFoodReevaluation : int
 
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	foodList= get_tree().get_nodes_in_group("food")
+	player = get_tree().get_nodes_in_group("player")
 	reevaluateFood()
 	framesSinceFoodReevaluation = 0
 	framesSinceSpawn = 0
@@ -41,7 +44,7 @@ func _process(delta):
 		framesSinceFoodReevaluation = 0
 	if(not closestFood == null):
 		var targetDir = (closestFood.position - position).normalized()
-		position = position + 0.1*targetDir*speed * (delta*20)
+		position = position + 0.001*targetDir*speed * (delta*20)
 		if framesSinceSpawn >1000:
 			if (framesSinceSpawn%100) == 0:
 				speed += 2
@@ -62,6 +65,7 @@ func _process(delta):
 		if framesSinceSpawn >1000:
 			if (framesSinceSpawn%100) == 0:
 				speed += 2
+	followPlayer(delta)
 
 
 
@@ -124,3 +128,28 @@ func tear3():
 	riss3.position = $Marker2D.global_position
 	var rot = rng.randf_range(0,6.28)
 	riss3.rotation = rot
+
+func followPlayer(delta):
+	var targetplayer = player[0]
+	if(not targetplayer == null):
+		var targetDir = (targetplayer.position - position).normalized()
+		position = position + 0.055*targetDir*speed * (delta*20)
+		if framesSinceSpawn >1000:
+			
+			if (framesSinceSpawn%50) == 0:
+				var randint = rng.randi_range(0, 10)
+				if randint == 1:
+					tear1()
+				elif randint == 2:
+					tear2()
+				elif randint == 3:
+					tear3()
+	if framesSinceSpawn == 2500:
+		speed = 30
+	if framesSinceSpawn <2500 and size < 45:
+		if (framesSinceSpawn%5) == 0:
+			size += 0.3
+			updateSize()
+		if framesSinceSpawn >1000:
+			if (framesSinceSpawn%100) == 0:
+				speed += 2

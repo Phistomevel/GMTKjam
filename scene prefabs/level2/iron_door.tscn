@@ -7,7 +7,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h58ha"]
 size = Vector2(1035.18, 590.953)
 
-[node name="iron_door" type="RigidBody2D" groups=["collateral", "red_door"]]
+[node name="iron_door" type="RigidBody2D" groups=["red_door"]]
 physics_material_override = ExtResource("1_go7oc")
 gravity_scale = 0.0
 lock_rotation = true
