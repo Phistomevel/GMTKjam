@@ -1,15 +1,9 @@
 extends Control
 
- 
 
 func _on_start_game_button_pressed():
 	GlobalAudioPlayer.play_click()
-	get_tree().change_scene_to_file("res://level scenes/level_one.tscn")
-
-
-func _on_start_game_button_2_pressed():
-	GlobalAudioPlayer.play_click()
-	SceneTransition.change_scene("res://level scenes/title_page.tscn")
+	get_tree().change_scene_to_file("res://level scenes/after_level_one.tscn")
 
 
 func _on_options_button_pressed():

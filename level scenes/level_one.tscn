@@ -1,11 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bfvgukfncfo63"]
+[gd_scene load_steps=12 format=3 uid="uid://bfvgukfncfo63"]
 
 [ext_resource type="Script" path="res://scripts/level_one.gd" id="1_0fsi3"]
 [ext_resource type="Texture2D" uid="uid://v6lbsnqd8t4x" path="res://assets/level_one_map/map.png" id="1_i5y0m"]
 [ext_resource type="PackedScene" uid="uid://h40y1eidg8iv" path="res://scene prefabs/black_hole.tscn" id="2_fsm7d"]
 [ext_resource type="PackedScene" uid="uid://b7qpctvo0nraq" path="res://scene prefabs/player.tscn" id="3_qj4xj"]
 [ext_resource type="PackedScene" path="res://scene prefabs/level1_hud.tscn" id="5_1wje2"]
-[ext_resource type="PackedScene" path="res://scene prefabs/pause_screen.tscn" id="6_nciwl"]
+[ext_resource type="PackedScene" uid="uid://cbllu3tyrxgm" path="res://scene prefabs/pause_screen.tscn" id="6_nciwl"]
+[ext_resource type="PackedScene" uid="uid://c37d8kn12ekpu" path="res://scene prefabs/visual_novel.tscn" id="7_f2ybp"]
+[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="7_tdxxs"]
+[ext_resource type="Texture2D" uid="uid://btlkd7dgts8if" path="res://assets/temp/player_konzept.png" id="9_1h8mi"]
+[ext_resource type="Texture2D" uid="uid://bc827vpbcs87c" path="res://assets/temp/JukeBot.png" id="9_ifchs"]
+[ext_resource type="PackedScene" uid="uid://d2ainclj7k5sj" path="res://scene prefabs/antifood_bacterium.tscn" id="11_el8pn"]
 
 [node name="Level_One" type="Node2D"]
 script = ExtResource("1_0fsi3")
@@ -23,14 +28,24 @@ position = Vector2(-379, -145)
 
 [node name="player" parent="." instance=ExtResource("3_qj4xj")]
 z_index = 1
-position = Vector2(430, 0)
+position = Vector2(191, 123)
 scale = Vector2(0.145, 0.145)
+speed = 300
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.76, 0.76)
 
 [node name="CanvasLayer" parent="player/Camera2D" instance=ExtResource("5_1wje2")]
+unique_name_in_owner = true
 
 [node name="PauseScreen" parent="player/Camera2D" instance=ExtResource("6_nciwl")]
+
+[node name="Sprite2D" type="Sprite2D" parent="player/Camera2D"]
+unique_name_in_owner = true
+modulate = Color(0.839216, 0.839216, 0.839216, 1)
+z_index = 1
+scale = Vector2(29.855, 29.855)
+texture = ExtResource("7_tdxxs")
 
 [node name="FoodSpawnCooldown" type="Timer" parent="."]
 autostart = true
@@ -38,6 +53,39 @@ autostart = true
 [node name="AntiFoodBactCooldown" type="Timer" parent="."]
 wait_time = 20.0
 autostart = true
+
+[node name="VisualNovel" parent="." instance=ExtResource("7_f2ybp")]
+unique_name_in_owner = true
+z_index = 2
+anchors_preset = 12
+anchor_left = 0.0
+anchor_right = 1.0
+offset_left = -495.0
+offset_top = 314.0
+offset_right = -495.0
+offset_bottom = 314.0
+scale = Vector2(1.315, 1.315)
+size_flags_vertical = 8
+SpeakerList = Array[String](["Bill II.", "Computer"])
+SpeakerPics = Array[Resource]([ExtResource("9_1h8mi"), ExtResource("9_ifchs")])
+SpeakerPos = Array[int]([0, 1])
+ConvoList = Array[String](["*Beep* *Beep*", "Emergency! Alert! Alert! A blackhole has appeared in petri dish 02!", "What? Black holes don't just appear out of nowhere!", "Alert! Alert! A black hole has appeared in petri dish 02! Emergency protocol activated!", "...I didn't even set an emergency protocol. Anyways, what do I have to do?", "Prevent black hole from reaching CRITICIAL MASS!!! and try to hold it under critical mass for 5 seconds.", "Alright, sounds easy enough. Wait, how do I make the black hole have less mass?", "Petri dish 02 contains the special bacteria, which you have developed yourself, that convert matter to antimatter.", "Ah yeah, I forgot about that.", "Emergency! Emergency!", "I've heard you the first time!"])
+SpeakerTurn = Array[int]([1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0])
+
+[node name="antifood_bacterium" parent="." instance=ExtResource("11_el8pn")]
+position = Vector2(813, -114)
+
+[node name="antifood_bacterium2" parent="." instance=ExtResource("11_el8pn")]
+position = Vector2(197, -691)
+rotation = -1.54996
+
+[node name="antifood_bacterium3" parent="." instance=ExtResource("11_el8pn")]
+position = Vector2(-17, 468)
+rotation = 1.04412
+
+[node name="antifood_bacterium4" parent="." instance=ExtResource("11_el8pn")]
+position = Vector2(-705, 370)
+rotation = -0.688802
 
 [connection signal="aboveCritical" from="blackHole" to="." method="_on_black_hole_above_critical"]
 [connection signal="belowCritical" from="blackHole" to="." method="_on_black_hole_below_critical"]

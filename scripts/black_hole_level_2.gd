@@ -95,7 +95,11 @@ func _on_area_2d_body_entered(body):
 	elif(body.name =="player"):
 		gameLost.emit()
 	elif(body.is_in_group("collateral")):
+		size += body.nutritionalValue
 		body.queue_free()
+		updateSize()
+		updateFood()
+		reevaluateFood()
 		pass
 	pass # Replace with function body.
 
