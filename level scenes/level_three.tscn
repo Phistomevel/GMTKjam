@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cgv2s16ofyy5"]
+[gd_scene load_steps=16 format=3 uid="uid://cgv2s16ofyy5"]
 
 [ext_resource type="Texture2D" uid="uid://cnlj7glb86tbo" path="res://assets/level_three/level_three_map/strasse.png" id="1_ng65c"]
 [ext_resource type="Script" path="res://scripts/level_three.gd" id="1_w6eck"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://byl4nh11gw16j" path="res://scene prefabs/car.tscn" id="5_bjxuq"]
 [ext_resource type="Texture2D" uid="uid://cyqf5wa1qpdld" path="res://assets/level_three/AUTOS/auto_türkis.png" id="8_3wn5u"]
 [ext_resource type="PackedScene" uid="uid://drwg2le4ul65m" path="res://scene prefabs/barrel.tscn" id="9_8nwl1"]
+[ext_resource type="PackedScene" uid="uid://cbllu3tyrxgm" path="res://scene prefabs/pause_screen.tscn" id="9_ebw4p"]
 [ext_resource type="Texture2D" uid="uid://dj48m2p8uxm8w" path="res://assets/level_three/LLIB/exitSymbol.png" id="10_ge4ea"]
 [ext_resource type="Texture2D" uid="uid://bnbjdk7wg2chp" path="res://assets/level_three/LLIB/fuelSymbol.png" id="11_j7rkl"]
 [ext_resource type="PackedScene" uid="uid://d15nu7ddu43hs" path="res://scene prefabs/black_hole_level_3.tscn" id="12_1qtxw"]
@@ -183,6 +184,8 @@ speed = 300
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(0.525, 0.525)
+
+[node name="PauseScreen" parent="player/Camera2D" instance=ExtResource("9_ebw4p")]
 
 [node name="Car2" parent="." instance=ExtResource("5_bjxuq")]
 position = Vector2(-463, 4845)
