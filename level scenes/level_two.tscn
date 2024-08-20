@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dwfodhw6qydch" path="res://assets/tisch/tisch/tisch_bücher.png" id="11_qkeh4"]
 [ext_resource type="Texture2D" uid="uid://d3n8csrk1b48c" path="res://assets/druckplatte/druckplatte/druckplatte_gedrückt.png" id="12_ceqax"]
 [ext_resource type="Texture2D" uid="uid://d23nje8vpdy6d" path="res://assets/tür/tür/tür_offen.png" id="14_8o85q"]
-[ext_resource type="PackedScene" path="res://scene prefabs/level2/siren.tscn" id="19_r477y"]
+[ext_resource type="PackedScene" uid="uid://dgr58l7ts7b28" path="res://scene prefabs/level2/siren.tscn" id="19_r477y"]
 [ext_resource type="Texture2D" uid="uid://i8xj5unjdaif" path="res://assets/LabFloor.png" id="20_3ls4g"]
 [ext_resource type="PackedScene" uid="uid://l53ag6toww2s" path="res://scene prefabs/level2/black_hole_lvl_2.tscn" id="20_8e4bc"]
 [ext_resource type="Texture2D" uid="uid://cs1475mug7lwo" path="res://assets/klon/klon/sh_klon.png" id="20_c6gsr"]

@@ -1,5 +1,7 @@
 extends Node2D
 
+func _ready():
+	GlobalAudioPlayer.play_second_level_music()
 
 func _on_level_2_finishline_body_entered(body):
 	if body.name == "player":

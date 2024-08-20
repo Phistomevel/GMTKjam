@@ -295,7 +295,7 @@ offset_top = 23.0
 offset_right = 1119.0
 offset_bottom = 54.0
 size_flags_horizontal = 4
-text = "🎵"
+text = "𝅘𝅥𝅮"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
