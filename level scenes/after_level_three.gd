@@ -1,10 +1,9 @@
 extends Control
 
 
-
 func _on_start_game_button_pressed():
 	GlobalAudioPlayer.play_click()
-	get_tree().change_scene_to_file("res://level scenes/dialog_vor_level_3.tscn")
+	get_tree().change_scene_to_file("res://level scenes/final_dialogue.tscn")
 
 
 func _on_options_button_pressed():

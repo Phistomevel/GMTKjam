@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://y5asmrn7lo17"]
+[gd_scene load_steps=28 format=3 uid="uid://d15nu7ddu43hs"]
 
 [ext_resource type="Script" path="res://scripts/black_hole_level_3.gd" id="1_136m4"]
 [ext_resource type="Texture2D" uid="uid://dc562st54kj0s" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0000.png" id="2_131cu"]

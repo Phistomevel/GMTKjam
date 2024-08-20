@@ -1,6 +1,7 @@
 extends Node2D
 
 signal gameLost
+
 signal sizeChanged(value)
 signal belowCritical
 signal aboveCritical
@@ -55,8 +56,7 @@ func updateSize():
 		belowCritical.emit()
 	elif size > -5:
 		aboveCritical.emit()
-	if size >= 80:
-		gameLost.emit()
+		
 
 func _on_area_2d_body_entered(body):
 	#check if body is food

@@ -46,7 +46,7 @@ func _on_area_2d_body_entered(body):
 		body.queue_free()
 		var spawnAntifood = preload("res://scene prefabs/antifood.tscn").instantiate()
 		spawnAntifood.global_position = pos
-		spawnAntifood.nutritionalValue = -2 # edit as required
+		spawnAntifood.nutritionalValue = -5 # edit as required
 		var variate = randi_range(0,2)
 		spawnAntifood.sprite = antiFoodSprites[variate]
 		spawnAntifood.shape = PackedVector2Array(antiFoodShapes[variate])
