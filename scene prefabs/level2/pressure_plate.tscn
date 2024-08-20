@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch2oxh3rsa2fr"]
+
+[ext_resource type="Script" path="res://scripts/pressure_plate.gd" id="1_603rd"]
+[ext_resource type="Texture2D" uid="uid://dgg3w1g4tktjn" path="res://assets/druckplatte/druckplatte/druckplatte_nicht_gedrückt.png" id="2_s6e62"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xy5g3"]
+size = Vector2(65.1704, 69.8254)
+
+[node name="PressurePlate" type="Node2D"]
+z_index = 3
+script = ExtResource("1_603rd")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 273
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2.28882e-05, -12)
+scale = Vector2(12.03, 12.03)
+shape = SubResource("RectangleShape2D_xy5g3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_s6e62")

@@ -1,0 +1,129 @@
+[gd_scene load_steps=28 format=3 uid="uid://l53ag6toww2s"]
+
+[ext_resource type="Script" path="res://scripts/black_hole.gd" id="1_2s7na"]
+[ext_resource type="Texture2D" uid="uid://dc562st54kj0s" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0000.png" id="2_nianw"]
+[ext_resource type="Texture2D" uid="uid://dn000i71d88ae" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0001.png" id="3_r0e6i"]
+[ext_resource type="Texture2D" uid="uid://cy8ayr731x4jr" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0002.png" id="4_or1y3"]
+[ext_resource type="Texture2D" uid="uid://bvibncr447wta" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0003.png" id="5_3rh0d"]
+[ext_resource type="Texture2D" uid="uid://cu2njnstl1da3" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0004.png" id="6_q2brt"]
+[ext_resource type="Texture2D" uid="uid://cctepb7jt8jwd" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0005.png" id="7_pd30r"]
+[ext_resource type="Texture2D" uid="uid://cqhvj0751qrii" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0006.png" id="8_aeh0q"]
+[ext_resource type="Texture2D" uid="uid://baegr6et8tjsp" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0007.png" id="9_0nojg"]
+[ext_resource type="Texture2D" uid="uid://voej2sdkum6i" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0008.png" id="10_55yfc"]
+[ext_resource type="Texture2D" uid="uid://bx20gkfes582o" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0009.png" id="11_seecy"]
+[ext_resource type="Texture2D" uid="uid://b27em7f65nglx" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0010.png" id="12_ga70a"]
+[ext_resource type="Texture2D" uid="uid://brfv1gl4o8wuc" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0011.png" id="13_84q3e"]
+[ext_resource type="Texture2D" uid="uid://277ne13e01ch" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0012.png" id="14_ul7fq"]
+[ext_resource type="Texture2D" uid="uid://ewoy18bqg8g6" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0013.png" id="15_rk2as"]
+[ext_resource type="Texture2D" uid="uid://h3wsd00yj81n" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0014.png" id="16_hao1t"]
+[ext_resource type="Texture2D" uid="uid://bptkbht0t5s1p" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0015.png" id="17_266fq"]
+[ext_resource type="Texture2D" uid="uid://ddapoiaqxg1mb" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0016.png" id="18_7fi2h"]
+[ext_resource type="Texture2D" uid="uid://dtpx1pfy1g1sx" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0017.png" id="19_e0kme"]
+[ext_resource type="Texture2D" uid="uid://b3l08g8q1lhu5" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0018.png" id="20_27oho"]
+[ext_resource type="Texture2D" uid="uid://b8xgip0r58aoq" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0019.png" id="21_757hn"]
+[ext_resource type="Texture2D" uid="uid://blx0l1ct1ohsp" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0020.png" id="22_l68fm"]
+[ext_resource type="Texture2D" uid="uid://dewh72ivg0hqy" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0021.png" id="23_iq64g"]
+[ext_resource type="Texture2D" uid="uid://bjrpqraurnlxo" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0022.png" id="24_vrycr"]
+[ext_resource type="Texture2D" uid="uid://ce400ot4py637" path="res://assets/animation_schwarzes_loch/Zeitleiste 1_0023.png" id="25_ql8vx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vbpdo"]
+radius = 66.3702
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1gouc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nianw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r0e6i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_or1y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3rh0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q2brt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pd30r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_aeh0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0nojg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_55yfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_seecy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ga70a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_84q3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ul7fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_rk2as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hao1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_266fq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7fi2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_e0kme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_27oho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_757hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_l68fm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_iq64g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vrycr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ql8vx")
+}],
+"loop": true,
+"name": &"black_hole",
+"speed": 12.0
+}]
+
+[node name="blackHole" type="Node2D"]
+script = ExtResource("1_2s7na")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vbpdo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
+scale = Vector2(0.073, 0.073)
+sprite_frames = SubResource("SpriteFrames_1gouc")
+animation = &"black_hole"
+autoplay = "black_hole"
+
+[node name="NavigationLink2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

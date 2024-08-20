@@ -215,18 +215,18 @@ layout_mode = 2
 layout_mode = 2
 offset_left = 4.0
 offset_top = 41.0
-offset_right = 74.0
+offset_right = 104.0
 offset_bottom = 89.0
 rotation = -0.174533
-pivot_offset = Vector2(70, 48)
+pivot_offset = Vector2(104.26, 48)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_h6s18")
 theme_override_font_sizes/font_size = 50
-text = "Bill"
+text = "Book"
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 100
+theme_override_constants/separation = 120
 theme_override_styles/separator = SubResource("StyleBoxLine_r1f02")
 
 [node name="Control2" type="Control" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
@@ -241,7 +241,7 @@ offset_bottom = 89.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_h6s18")
 theme_override_font_sizes/font_size = 50
-text = "\"2\""
+text = "of"
 
 [node name="VSeparator2" type="VSeparator" parent="VBoxContainer/MarginContainer/Control/HBoxContainer"]
 layout_mode = 2
@@ -262,7 +262,7 @@ pivot_offset = Vector2(0, 48)
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_h6s18")
 theme_override_font_sizes/font_size = 50
-text = "Scale"
+text = "Bill II."
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 150)

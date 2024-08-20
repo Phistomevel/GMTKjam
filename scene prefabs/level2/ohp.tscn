@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://v7ldiqxxwjf"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://diqqpqcyq2ksx" path="res://material/foodstuff.tres" id="1_fesv6"]
+[ext_resource type="Script" path="res://scripts/Food.gd" id="2_jbow2"]
+[ext_resource type="Texture2D" uid="uid://cgs7dlqm5mbxe" path="res://assets/ohp/ohp/sh_ohp.png" id="3_ies87"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h58ha"]
+size = Vector2(80, 77.0001)
+
+[node name="ohp" type="RigidBody2D" groups=["antifood"]]
+z_index = 3
+physics_material_override = ExtResource("1_fesv6")
+gravity_scale = 0.0
+lock_rotation = true
+linear_damp = 6.24
+angular_damp = 100.0
+script = ExtResource("2_jbow2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.60933e-06, 1.5)
+scale = Vector2(0.0925926, 0.0898148)
+texture = ExtResource("3_ies87")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9.91821e-05, 1.50005)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_h58ha")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -176,7 +176,7 @@ polygon = PackedVector2Array(-765, 6877, -757, -14031, -3233, -14017, -3239, 971
 
 [node name="player" parent="." instance=ExtResource("3_2nwvk")]
 z_index = 3
-position = Vector2(-29, -10274)
+position = Vector2(-73, 6123)
 scale = Vector2(0.185, 0.185)
 speed = 500
 
@@ -254,6 +254,18 @@ rotation = 6.97962
 position = Vector2(389, -10010)
 rotation = 7.14553
 
+[node name="Car17" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(496, -13732)
+rotation = 6.34438
+
+[node name="Car18" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-46, -13746)
+rotation = 6.11156
+
+[node name="Car19" parent="." instance=ExtResource("5_bjxuq")]
+position = Vector2(-534, -13774)
+rotation = 5.21862
+
 [node name="Barrel" parent="." instance=ExtResource("9_8nwl1")]
 position = Vector2(306, 5122)
 rotation = 1.67338
@@ -283,11 +295,11 @@ position = Vector2(326, -8483)
 rotation = -5.30439
 
 [node name="Barrel8" parent="." instance=ExtResource("9_8nwl1")]
-position = Vector2(-434, -10523)
+position = Vector2(322, -13373)
 rotation = -8.11583
 
 [node name="Barrel13" parent="." instance=ExtResource("9_8nwl1")]
-position = Vector2(-26.0002, -10671)
+position = Vector2(-547, -13362)
 rotation = -8.11583
 
 [node name="Barrel14" parent="." instance=ExtResource("9_8nwl1")]
@@ -295,11 +307,11 @@ position = Vector2(-206, -10483)
 rotation = -8.11583
 
 [node name="Barrel15" parent="." instance=ExtResource("9_8nwl1")]
-position = Vector2(-422, -10743)
+position = Vector2(13, -13352)
 rotation = -8.11583
 
 [node name="Barrel16" parent="." instance=ExtResource("9_8nwl1")]
-position = Vector2(362, -10627)
+position = Vector2(-237, -13385)
 rotation = -8.11583
 
 [node name="Barrel9" parent="." instance=ExtResource("9_8nwl1")]
@@ -389,6 +401,11 @@ unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FUEL5/FuelArea5"]
 shape = SubResource("CircleShape2D_hb0ty")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-768, -13551, -592, -13448, -544, -13448, -465, -13534, -421, -13612, -357, -13758, -328, -13606, -302, -13532, -274, -13514, -185, -13527, -119, -13541, -95, -13532, -89, -13561, 60, -13588, 85, -13582, 150, -13590, 167, -13599, 181, -13572, 201, -13582, 249, -13564, 344, -13558, 369, -13544, 385, -13554, 399, -13566, 492, -13566, 546, -13559, 560, -13551, 596, -13547, 630, -13543, 655, -13547, 682, -13549, 684, -13567, 519, -13577, 241, -13575, 173, -13611, 80, -13596, 49, -13602, -24, -13587, -284, -13529, -359, -13771, -485, -13528, -583, -13467, -810, -13623)
 
 [connection signal="body_entered" from="EXIT/ExitArea" to="." method="_on_exit_area_body_entered"]
 [connection signal="body_entered" from="FUEL/FuelArea" to="." method="_on_fuel_area_body_entered"]

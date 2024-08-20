@@ -14,6 +14,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [node name="VisualNovel" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchor_left = 0.500434
 anchor_top = 1.0
