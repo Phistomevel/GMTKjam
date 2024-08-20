@@ -20,11 +20,13 @@ var foodShapes = [
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	first_level_dialogue()
 	GlobalAudioPlayer.play_first_level_music()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Input.is_action_just_pressed("ui_cancel"):
+		pause()
 
 func randomPointOnMap():
 	var a = randf()
@@ -79,3 +81,18 @@ func _on_canvas_layer_game_won():
 func _on_black_hole_game_lost():
 	print("Sadge")
 	pass # Replace with function body.
+
+func pause():
+	get_tree().paused = true
+	$player/Camera2D/PauseScreen.visible = true
+
+func first_level_dialogue():
+	var dia = preload("res://scene prefabs/visual_novel.tscn").instantiate()
+	# TODO: implement actual dialogue
+	# dia.SpeakerList = ["Bill II.", "Computer"]
+	# dia.Pics = []
+	# dia.SpeakerPos = [0, 1]
+	# dia.ConvoList = ["Lorem ipsum"]
+	# dia.SpeakerTurn = [0]
+	# Avatars
+	add_child(dia)
