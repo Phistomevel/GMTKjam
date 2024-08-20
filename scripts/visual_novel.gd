@@ -30,6 +30,7 @@ var fin : bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	get_tree().paused = true
 	$SpeakerPic1.position = LeftPos
 	$SpeakerPic1.scale = LeftScale
 	$SpeakerPic2.position = RightPos
@@ -75,5 +76,7 @@ func convo():
 			tween.tween_property(Text, "visible_ratio", 1, Text.get_total_character_count()/10.0)
 			killtween = tween
 	else:
-		killtween.kill()
+		if killtween:
+			killtween.kill()
+		get_tree().paused = false
 		queue_free()

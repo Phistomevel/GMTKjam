@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://24ku1ewgiug7"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://diqqpqcyq2ksx" path="res://material/foodstuff.tres" id="1_hcyyi"]
+[ext_resource type="Script" path="res://scripts/Food.gd" id="2_kbhij"]
+[ext_resource type="Texture2D" uid="uid://lfhm6kptp7vh" path="res://assets/tisch/tisch/sh_tisch.png" id="3_juky8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h58ha"]
+size = Vector2(460.572, 148.38)
+
+[node name="ediblewall" type="RigidBody2D" groups=["collateral"]]
+z_index = 4
+physics_material_override = ExtResource("1_hcyyi")
+gravity_scale = 0.0
+lock_rotation = true
+freeze = true
+linear_damp = 6.24
+angular_damp = 100.0
+script = ExtResource("2_kbhij")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, 0)
+scale = Vector2(0.377, 0.254)
+texture = ExtResource("3_juky8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 4
+position = Vector2(1.73998, -2.10001)
+rotation = -3.14159
+scale = Vector2(1.015, 1.05)
+shape = SubResource("RectangleShape2D_h58ha")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
