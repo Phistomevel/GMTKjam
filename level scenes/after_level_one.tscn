@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c34u373j1bdvw"]
+
+[ext_resource type="PackedScene" uid="uid://c37d8kn12ekpu" path="res://scene prefabs/visual_novel.tscn" id="1_7dvtf"]
+[ext_resource type="Texture2D" uid="uid://dptxknwgmrmy" path="res://assets/paper.png" id="1_gbo5j"]
+[ext_resource type="Script" path="res://scripts/after_level_one.gd" id="1_mws60"]
+[ext_resource type="Texture2D" uid="uid://btlkd7dgts8if" path="res://assets/temp/player_konzept.png" id="2_3abaa"]
+[ext_resource type="Texture2D" uid="uid://bc827vpbcs87c" path="res://assets/temp/JukeBot.png" id="3_5e5o5"]
+
+[node name="After Level One" type="Node2D"]
+script = ExtResource("1_mws60")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.839216, 0.839216, 0.839216, 1)
+z_index = 1
+position = Vector2(552, 305)
+scale = Vector2(2.96, 2.96)
+texture = ExtResource("1_gbo5j")
+
+[node name="VisualNovel" parent="." instance=ExtResource("1_7dvtf")]
+unique_name_in_owner = true
+z_index = 2
+anchors_preset = 12
+anchor_left = 0.0
+anchor_right = 1.0
+offset_left = 50.0
+offset_top = 454.0
+offset_right = 50.0
+offset_bottom = 454.0
+SpeakerList = Array[String](["Bill II.", "Computer"])
+SpeakerPics = Array[Resource]([ExtResource("2_3abaa"), ExtResource("3_5e5o5")])
+SpeakerPos = Array[int]([0, 1])
+ConvoList = Array[String](["Ahhh! ", "*Beep* Analyzing situation...", "It grew too much!", "*Beep* Formulating plan B...", "What is plan B ?!?!", "… ... ...", "The black hole has too much mass! It will devour us!", "... ... ...", "...", "Calculations finished. Leave the laboratory as fast as possible.", "Activate emergancy protocol phase two. Close all doors.", "That does not help!", "See you at the Exit."])
+SpeakerTurn = Array[int]([0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1])
