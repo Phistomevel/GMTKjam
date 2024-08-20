@@ -179,7 +179,7 @@ polygon = PackedVector2Array(-765, 6877, -757, -14031, -3233, -14017, -3239, 971
 z_index = 3
 position = Vector2(-73, 6123)
 scale = Vector2(0.185, 0.185)
-speed = 300
+speed = 500
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 zoom = Vector2(0.525, 0.525)
@@ -305,13 +305,11 @@ nutritionalValue = 5
 [node name="Barrel6" parent="." instance=ExtResource("9_8nwl1")]
 position = Vector2(-505, -7867)
 rotation = -6.11516
-mass = 0.72
 nutritionalValue = 2
 
 [node name="Barrel7" parent="." instance=ExtResource("9_8nwl1")]
 position = Vector2(326, -8483)
 rotation = -5.30439
-mass = 0.71
 nutritionalValue = 1
 
 [node name="Barrel8" parent="." instance=ExtResource("9_8nwl1")]
@@ -325,7 +323,6 @@ rotation = -8.11583
 [node name="Barrel14" parent="." instance=ExtResource("9_8nwl1")]
 position = Vector2(-206, -10483)
 rotation = -8.11583
-mass = 0.58
 nutritionalValue = 2
 
 [node name="Barrel15" parent="." instance=ExtResource("9_8nwl1")]
@@ -354,7 +351,6 @@ nutritionalValue = 2
 [node name="Barrel12" parent="." instance=ExtResource("9_8nwl1")]
 position = Vector2(356, -7125)
 rotation = -6.20683
-mass = 0.75
 nutritionalValue = 5
 
 [node name="EXIT" type="Sprite2D" parent="."]
